@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <Box sx={{ backgroundColor: "orangered" }}>
+      <Typography align="center">Footer</Typography>
+    </Box>
+  );
+};
 
-export default Footer
+export default Footer;

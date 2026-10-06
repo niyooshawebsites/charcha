@@ -5,6 +5,7 @@ import ThemeRegistry from "./ThemeRegistry";
 import Container from "@mui/material/Container";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Box from "@mui/material/Box";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         <ThemeRegistry>
-          <Header />
-          <Container>{children}</Container>
-          <Footer />
+          <Box
+            sx={{
+              height: "100vh",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Header />
+            <Container>{children}</Container>
+            <Footer />
+          </Box>
         </ThemeRegistry>
       </body>
     </html>
