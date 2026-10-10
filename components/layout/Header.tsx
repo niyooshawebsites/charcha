@@ -10,12 +10,21 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ForumIcon from "@mui/icons-material/Forum";
+import Link from "next/link";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = [
+  {
+    name: "Login",
+    link: "/",
+  },
+  {
+    name: "Register",
+    link: "/register",
+  },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
@@ -72,30 +81,19 @@ const Header = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           {/* Mobile menu */}
-          <ForumIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <ForumIcon className="hidden md:flex mr-1" />
+
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="../../app/page.tsx"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "inherit",
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
+            className="mr-4 hidden md:flex font-inherit tracking-[.3rem] text-inherit no-underline"
           >
             CHARCHA
           </Typography>
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-            }}
-          >
+          <Box className="flex grow md:hidden">
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -121,8 +119,12 @@ const Header = () => {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Link href={`${page.link}`}>
+                    <Typography sx={{ textAlign: "center" }}>
+                      {page.name}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -157,17 +159,14 @@ const Header = () => {
           >
             <Box sx={{ margin: "auto" }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
+                <Link
+                  key={page.name}
                   onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "inline-block",
-                  }}
+                  href={`${page.link}`}
+                  className="mainMenuLinks"
                 >
-                  {page}
-                </Button>
+                  {page.name}
+                </Link>
               ))}
             </Box>
           </Box>

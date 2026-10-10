@@ -4,13 +4,13 @@ import { ReactNode } from "react";
 
 interface UiCardProps {
   children?: ReactNode;
-  width: string | number;
+  customClass: string;
 }
 
-const UiCard = ({ children, width = "50%" }: UiCardProps) => {
+const UiCard = ({ children, customClass }: UiCardProps) => {
   return (
-    <Card sx={{ width, p: 3 }} variant="outlined">
-      <CardContent>{children && null}</CardContent>
+    <Card variant="outlined" className={customClass}>
+      <CardContent>{children}</CardContent>
     </Card>
   );
 };

@@ -5,11 +5,12 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import AccountCircle from "@mui/icons-material/AccountCircle";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import IconButton from "@mui/material/IconButton";
+import PersonIcon from "@mui/icons-material/Person";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -33,8 +34,8 @@ const RegisterForm = () => {
       noValidate
       autoComplete="off"
     >
-      <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-        <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
+      <Box className="flex items-center flex-end">
+        <PersonIcon className="mr-1 my-0.5 text-blue-500" />
         <TextField
           type="text"
           label="Username"
@@ -47,8 +48,8 @@ const RegisterForm = () => {
         />
       </Box>
 
-      <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-        <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
+      <Box className="flex items-center flex-end">
+        <AlternateEmailIcon className="mr-1 my-0.5 text-blue-500" />
         <TextField
           type="email"
           label="email"
@@ -61,10 +62,8 @@ const RegisterForm = () => {
         />
       </Box>
 
-      <Box
-        sx={{ display: "flex", alignItems: "flex-end", position: "relative" }}
-      >
-        <VpnKeyIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
+      <Box className="flex items-center flex-end relative">
+        <VpnKeyIcon className="mr-1 my-0.5 text-blue-500" />
         <TextField
           type={`${showPassword ? "text" : "password"}`}
           label="Password"
@@ -77,24 +76,17 @@ const RegisterForm = () => {
         />
         <IconButton
           onClick={toggleShowPassword}
-          sx={{
-            position: "absolute",
-            right: 0,
-            top: "50%",
-            transform: "translateY(-50%)",
-          }}
+          className="absolute right-0 top-1/2 -translate-y-1/2"
         >
           {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
         </IconButton>
       </Box>
 
-      <Box
-        sx={{ display: "flex", alignItems: "flex-end", position: "relative" }}
-      >
-        <VpnKeyIcon sx={{ color: "action.active", mr: 1, my: 0.5 }} />
+      <Box className="flex items-center flex-end relative">
+        <VpnKeyIcon className="mr-1 my-0.5 text-blue-500" />
         <TextField
           type={`${showConfirmPassword ? "text" : "password"}`}
-          label="Password"
+          label="Confirm Password"
           variant="outlined"
           size="small"
           placeholder="****"
@@ -104,18 +96,15 @@ const RegisterForm = () => {
         />
         <IconButton
           onClick={toggleShowConfirmPassword}
-          sx={{
-            position: "absolute",
-            right: 0,
-            top: "50%",
-            transform: "translateY(-50%)",
-          }}
+          className="absolute right-0 top-1/2 -translate-y-1/2"
         >
           {showConfirmPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
         </IconButton>
       </Box>
 
-      <Button type="submit" variant="contained" color="primary"></Button>
+      <Button type="submit" variant="contained" color="primary">
+        Register
+      </Button>
     </Stack>
   );
 };

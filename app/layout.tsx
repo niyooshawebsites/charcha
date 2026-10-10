@@ -6,6 +6,7 @@ import Container from "@mui/material/Container";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Box from "@mui/material/Box";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,21 +30,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
-        <ThemeRegistry>
-          <Box
-            sx={{
-              height: "100vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <Header />
-            <Container>{children}</Container>
-            <Footer />
-          </Box>
-        </ThemeRegistry>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <ThemeRegistry>
+            <Box
+              className="h-screen flex flex-col justify-between items-center">
+              <Header />
+              <Container>{children}</Container>
+              <Footer />
+            </Box>
+          </ThemeRegistry>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

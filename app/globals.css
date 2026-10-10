@@ -1,4 +1,22 @@
+@layer theme, base, mui, components, utilities;
+@import "tailwindcss";
 @import "@fontsource/roboto/300.css";
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
+
+.mainMenuLinks {
+  margin: 0px 15px;
+  color: #ebe9e9;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.mainMenuLinks:hover {
+  color: white;
+}
+
+.forgot-password-link {
+  text-decoration: none;
+}

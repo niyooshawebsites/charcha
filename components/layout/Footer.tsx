@@ -4,8 +4,8 @@ import { Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "orangered" }}>
-      <Typography align="center">Footer</Typography>
+    <Box className=" bg-blue-500 w-full ">
+      <Typography className="text-center">Footer</Typography>
     </Box>
   );
 };

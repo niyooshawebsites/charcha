@@ -6,18 +6,14 @@ import UiButton from "@/components/ui/UiButton";
 
 const LoginPage = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <UiCard width={"50%"}>
+    <Box className="flex justify-center items-center">
+      <UiCard customClass="bg-blue-100 p-3 w-100">
         <>
-          <Typography variant="h4"> Login </Typography>
+          <Typography variant="h4" className="mb-3">
+            Login
+          </Typography>
           <LoginForm />
-          <Typography variant="h6" align="center" sx={{ my: 2 }}>
+          <Typography variant="h6" className="my-2 text-center">
             OR
           </Typography>
           <UiButton
