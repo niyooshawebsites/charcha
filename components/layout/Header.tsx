@@ -116,14 +116,12 @@ const Header = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
+              className="flex md:hidden"
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Link href={`${page.link}`}>
-                    <Typography sx={{ textAlign: "center" }}>
-                      {page.name}
-                    </Typography>
+                    <Typography className="text-center">{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -131,39 +129,25 @@ const Header = () => {
           </Box>
 
           {/* Computer menu */}
-          <ForumIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <ForumIcon className="flex md:hidden mr-1" />
           <Typography
             variant="h5"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "inherit",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
+            className="mr-2 flex md:hidden grow font-inherit tracking-[.3rem] text-inherit no-underline"
           >
             CHARCHA
           </Typography>
 
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-            }}
-          >
-            <Box sx={{ margin: "auto" }}>
+          <Box className="hidden md:flex grow">
+            <Box className="m-auto">
               {pages.map((page) => (
                 <Link
                   key={page.name}
                   onClick={handleCloseNavMenu}
                   href={`${page.link}`}
-                  className="mainMenuLinks"
+                  className="mx-4 text-gray-200 inline-block no-underline text-xl hover:text-gray-50"
                 >
                   {page.name}
                 </Link>
@@ -172,16 +156,16 @@ const Header = () => {
           </Box>
 
           {/* User menu */}
-          <Box sx={{ flexGrow: 0 }}>
+          <Box className="grow-0">
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} className="p-0">
                 {/* <Avatar alt="Babai Bose" src="/static/images/avatar/2.jpg" /> */}
                 <Avatar {...stringAvatar("Babai Bose")} />
               </IconButton>
             </Tooltip>
 
             <Menu
-              sx={{ mt: "45px" }}
+              className="mt-3"
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
@@ -198,9 +182,7 @@ const Header = () => {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
+                  <Typography className="text-center">{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>

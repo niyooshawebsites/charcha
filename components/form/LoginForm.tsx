@@ -70,7 +70,7 @@ const LoginForm = () => {
       </Stack>
 
       <Box className="mt-2">
-        <Link href="/forgot-password" className="forgot-password-link">
+        <Link href="/forgot-password" className="no-underline">
           Forgot password?
         </Link>
       </Box>
