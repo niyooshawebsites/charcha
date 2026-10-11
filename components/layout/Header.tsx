@@ -24,7 +24,16 @@ const pages = [
     name: "Register",
     link: "/register",
   },
+  {
+    name: "Forgot Password",
+    link: "/forgot-password",
+  },
+  {
+    name: "Reset Password",
+    link: "/reset-password/fgfgf",
+  },
 ];
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
@@ -147,7 +156,7 @@ const Header = () => {
                   key={page.name}
                   onClick={handleCloseNavMenu}
                   href={`${page.link}`}
-                  className="mx-4 text-gray-200 inline-block no-underline text-xl hover:text-gray-50"
+                  className="mx-4 text-gray-200 inline-block no-underline text-md hover:text-gray-50"
                 >
                   {page.name}
                 </Link>

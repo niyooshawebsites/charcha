@@ -1,6 +1,5 @@
 import UiCard from "@/components/ui/UiCard";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { Box, Typography } from "@mui/material";
 import LoginForm from "@/components/form/LoginForm";
 import UiButton from "@/components/ui/UiButton";
 
