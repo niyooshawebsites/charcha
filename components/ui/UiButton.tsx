@@ -15,7 +15,7 @@ interface BtnProps {
   fullWidth: boolean;
   btnText: string;
   icon?: React.ReactNode;
-  onClick?: React.MouseEvent;
+  onClick?: () => void;
 }
 
 const UiButton = ({
