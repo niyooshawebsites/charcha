@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-interface CustomButton {
+interface BtnProps {
   type: "button" | "submit";
   variant: "contained" | "outlined" | "text";
   color:
@@ -14,6 +14,8 @@ interface CustomButton {
     | "warning";
   fullWidth: boolean;
   btnText: string;
+  icon?: React.ReactNode;
+  onClick?: React.MouseEvent;
 }
 
 const UiButton = ({
@@ -22,10 +24,11 @@ const UiButton = ({
   color,
   fullWidth,
   btnText,
-}: CustomButton): React.JSX.Element => {
+  icon,
+}: BtnProps): React.JSX.Element => {
   return (
     <Button type={type} variant={variant} color={color} fullWidth={fullWidth}>
-      {btnText}
+      {icon} {btnText}
     </Button>
   );
 };

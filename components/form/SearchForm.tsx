@@ -5,7 +5,7 @@ const SearchForm = () => {
   return (
     <Stack
       direction="row"
-      spacing={3}
+      spacing={2}
       component="form"
       noValidate
       autoComplete="off"

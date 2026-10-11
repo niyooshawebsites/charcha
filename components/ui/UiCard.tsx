@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 interface UiCardProps {
   children?: ReactNode;
-  customClass: string;
+  customClass?: string;
 }
 
 const UiCard = ({ children, customClass }: UiCardProps) => {
