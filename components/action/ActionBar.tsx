@@ -15,6 +15,7 @@ const ActionBar = () => {
   const [activeAction, setActiveAction] = useState<ActionType | null>(null);
 
   const handleOpenModal = (action: ActionType) => {
+    console.log("Opening modal:", action);
     setActiveAction(action);
     setModalOpen(true);
   };
@@ -25,7 +26,7 @@ const ActionBar = () => {
 
   return (
     <>
-      <Grid container spacing={2} className="bg-blue-50 h-fit p-3 rounded-md">
+      <Grid container spacing={2} className="bg-blue-50 p-3 rounded-md">
         <Grid size={12}>
           <SearchForm />
         </Grid>

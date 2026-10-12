@@ -1,5 +1,6 @@
-import { Typography, Modal } from "@mui/material";
+import { Typography, Modal, Box } from "@mui/material";
 import UiCard from "./UiCard";
+import UiButton from "./UiButton";
 
 export type ActionType = "ask" | "answer" | "post";
 
@@ -29,16 +30,29 @@ const UiModal = ({ open, onClose, type }: ModalProps) => {
 
   const config = modalConfig[type];
 
-  console.log(config.title);
-
   return (
     <Modal open={open} onClose={onClose}>
-      <UiCard>
-        <Typography variant="h6" className="mb-1">
-          {config.title}
-        </Typography>
-        <Typography className="text-gray-700">{config.description}</Typography>
-      </UiCard>
+      <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] bg-blue-100 border-2 border-blue-600 p-4 shadow rounded-lg">
+        <Box className="flex justify-between mb-2">
+          <Typography variant="h6" className="mb-1">
+            {config.title}
+          </Typography>
+          <UiButton
+            type="button"
+            variant="contained"
+            color="primary"
+            btnText="X"
+            fullWidth={false}
+            onClick={onClose}
+          />
+        </Box>
+
+        <UiCard>
+          <Typography className="text-gray-700">
+            {config.description}
+          </Typography>
+        </UiCard>
+      </Box>
     </Modal>
   );
 };

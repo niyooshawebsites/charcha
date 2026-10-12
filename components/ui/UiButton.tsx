@@ -16,6 +16,7 @@ interface BtnProps {
   btnText: string;
   icon?: React.ReactNode;
   onClick?: () => void;
+  customClass?: string;
 }
 
 const UiButton = ({
@@ -25,9 +26,18 @@ const UiButton = ({
   fullWidth,
   btnText,
   icon,
+  onClick,
+  customClass,
 }: BtnProps): React.JSX.Element => {
   return (
-    <Button type={type} variant={variant} color={color} fullWidth={fullWidth}>
+    <Button
+      type={type}
+      variant={variant}
+      color={color}
+      fullWidth={fullWidth}
+      onClick={onClick}
+      className={customClass}
+    >
       {icon} {btnText}
     </Button>
   );
