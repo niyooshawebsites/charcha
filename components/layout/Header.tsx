@@ -13,6 +13,7 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ForumIcon from "@mui/icons-material/Forum";
+import QuickreplyIcon from "@mui/icons-material/Quickreply";
 import Link from "next/link";
 
 const pages = [
@@ -90,16 +91,16 @@ const Header = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           {/* Mobile menu */}
-          <ForumIcon className="hidden md:flex mr-1" />
+          <QuickreplyIcon className="hidden md:flex mr-1" />
 
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="../../app/page.tsx"
+            href="/"
             className="mr-4 hidden md:flex font-inherit tracking-[.3rem] text-inherit no-underline"
           >
-            CHARCHA
+            FAST LANE
           </Typography>
 
           <Box className="flex grow md:hidden">
@@ -138,7 +139,7 @@ const Header = () => {
           </Box>
 
           {/* Computer menu */}
-          <ForumIcon className="flex md:hidden mr-1" />
+          <QuickreplyIcon className="flex md:hidden mr-1" />
           <Typography
             variant="h5"
             noWrap
@@ -146,7 +147,7 @@ const Header = () => {
             href="#app-bar-with-responsive-menu"
             className="mr-2 flex md:hidden grow font-inherit tracking-[.3rem] text-inherit no-underline"
           >
-            CHARCHA
+            FAST LANE
           </Typography>
 
           <Box className="hidden md:flex grow">

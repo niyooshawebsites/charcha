@@ -14,8 +14,8 @@ import Link from "next/link";
 
 const pages = [
   {
-    name: "Vishay",
-    link: "/vishay",
+    name: "Lanes",
+    link: "/lanes",
   },
 ];
 
