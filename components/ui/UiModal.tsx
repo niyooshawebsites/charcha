@@ -1,6 +1,6 @@
-import { Typography, Modal, Box } from "@mui/material";
+import { Typography, Modal, Box, IconButton } from "@mui/material";
 import UiCard from "./UiCard";
-import UiButton from "./UiButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 export type ActionType = "ask" | "answer" | "post";
 
@@ -37,14 +37,17 @@ const UiModal = ({ open, onClose, type }: ModalProps) => {
           <Typography variant="h6" className="mb-1">
             {config.title}
           </Typography>
-          <UiButton
+          {/* <UiButton
             type="button"
             variant="contained"
             color="primary"
             btnText="X"
             fullWidth={false}
             onClick={onClose}
-          />
+          /> */}
+          <IconButton className="absolute top-2 right-2" onClick={onClose}>
+            <CloseIcon />
+          </IconButton>
         </Box>
 
         <UiCard>
