@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
         hostname: "wallpaperaccess.com",
         pathname: "/full/**",
       },
+      {
+        protocol: "https",
+        hostname: "api.iconify.design",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };
