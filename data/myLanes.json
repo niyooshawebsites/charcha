@@ -1,0 +1,247 @@
+[
+  {
+    "name": "Travelling",
+    "spaces": [
+      {
+        "name": "Travel Lovers",
+        "description": "A community for travel enthusiasts to share experiences, discover destinations, exchange tips, and inspire each other to explore the world.",
+        "logo": "https://api.iconify.design/lucide:plane.svg",
+        "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      },
+      {
+        "name": "Solo Travel",
+        "description": "For independent travelers who love discovering the world alone, building confidence, meeting new people, and enjoying freedom on the road.",
+        "logo": "https://api.iconify.design/lucide:backpack.svg",
+        "banner": "https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+      },
+      {
+        "name": "Budget Travel & Backpacking",
+        "description": "Discover affordable destinations, backpacking routes, budget accommodations, travel hacks, and practical ways to explore more while spending less.",
+        "logo": "https://api.iconify.design/lucide:wallet.svg",
+        "banner": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+      },
+      {
+        "name": "Luxury Travel & Experiences",
+        "description": "Explore five-star hotels, luxury resorts, private villas, premium flights, exclusive experiences, and extraordinary destinations around the world.",
+        "logo": "https://api.iconify.design/lucide:crown.svg",
+        "banner": "https://images.unsplash.com/photo-1571896349842-33c89424de2d"
+      },
+      {
+        "name": "Adventure Travel",
+        "description": "For thrill-seekers who love exploring the outdoors through challenging journeys, exciting activities, and unforgettable adventures.",
+        "logo": "https://api.iconify.design/lucide:mountain.svg",
+        "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      },
+      {
+        "name": "Hiking & Trekking",
+        "description": "Share mountain trails, trekking routes, hiking essentials, trail recommendations, and stories from incredible journeys on foot.",
+        "logo": "https://api.iconify.design/lucide:footprints.svg",
+        "banner": "https://images.unsplash.com/photo-1551632811-561732d1e306"
+      },
+      {
+        "name": "Camping & Outdoor Travel",
+        "description": "A space for camping enthusiasts to exchange campsite recommendations, outdoor survival tips, gear advice, and ideas for sleeping under the stars.",
+        "logo": "https://api.iconify.design/lucide:tent.svg",
+        "banner": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d"
+      },
+      {
+        "name": "Road Trips & Long Drives",
+        "description": "Discover scenic highways, road trip itineraries, memorable pit stops, driving routes, and everything that makes the journey as exciting as the destination.",
+        "logo": "https://api.iconify.design/lucide:car-front.svg",
+        "banner": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800"
+      },
+      {
+        "name": "Motorcycle Travel & Biking",
+        "description": "For riders who love long-distance motorcycle journeys, scenic bike routes, touring gear, riding tips, and the freedom of the open road.",
+        "logo": "https://api.iconify.design/lucide:bike.svg",
+        "banner": "https://images.unsplash.com/photo-1558981806-ec527fa84c39"
+      },
+      {
+        "name": "Family Travel",
+        "description": "Find family-friendly destinations, activities for children, comfortable accommodations, and practical advice for creating memorable trips together.",
+        "logo": "https://api.iconify.design/lucide:users.svg",
+        "banner": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+      },
+      {
+        "name": "Couple Travel & Romantic Getaways",
+        "description": "Discover romantic destinations, honeymoon ideas, couples' retreats, scenic escapes, and meaningful experiences to enjoy with your partner.",
+        "logo": "https://api.iconify.design/lucide:heart.svg",
+        "banner": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963"
+      },
+      {
+        "name": "Travel with Friends",
+        "description": "Plan group adventures, share itineraries, split travel budgets, discover fun destinations, and collect unforgettable memories with friends.",
+        "logo": "https://api.iconify.design/lucide:users-round.svg",
+        "banner": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce"
+      },
+      {
+        "name": "Women Who Travel",
+        "description": "A community for women travelers to share experiences, find inspiration, exchange practical safety advice, and discover empowering travel opportunities.",
+        "logo": "https://api.iconify.design/lucide:flower-2.svg",
+        "banner": "https://images.unsplash.com/photo-1488646953014-85cb44e25828"
+      },
+      {
+        "name": "Senior Travel & Slow Adventures",
+        "description": "Explore comfortable journeys, accessible attractions, relaxed itineraries, cultural experiences, and travel ideas for older adults.",
+        "logo": "https://api.iconify.design/lucide:coffee.svg",
+        "banner": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+      },
+      {
+        "name": "Accessible & Inclusive Travel",
+        "description": "Share accessible destinations, mobility-friendly accommodations, inclusive travel resources, and practical tips for making journeys easier for everyone.",
+        "logo": "https://api.iconify.design/lucide:accessibility.svg",
+        "banner": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+      },
+      {
+        "name": "Cultural Travel & Heritage",
+        "description": "Discover historic landmarks, ancient civilizations, traditional festivals, local customs, and the stories that make every destination unique.",
+        "logo": "https://api.iconify.design/lucide:landmark.svg",
+        "banner": "https://images.unsplash.com/photo-1537996194471-e657df975ab4"
+      },
+      {
+        "name": "Food Travel & Culinary Adventures",
+        "description": "Explore destinations through their food, from street-food stalls and local markets to regional specialties, cooking traditions, and unforgettable dining experiences.",
+        "logo": "https://api.iconify.design/lucide:utensils.svg",
+        "banner": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+      },
+      {
+        "name": "Wildlife & Safari Travel",
+        "description": "Share wildlife encounters, safari destinations, national parks, ethical animal-watching experiences, and tips for observing nature responsibly.",
+        "logo": "https://api.iconify.design/lucide:binoculars.svg",
+        "banner": "https://images.unsplash.com/photo-1516426122078-c23e76319801"
+      },
+      {
+        "name": "Nature & Ecotourism",
+        "description": "Discover forests, mountains, wetlands, natural wonders, conservation experiences, and responsible ways to explore the planet's most beautiful environments.",
+        "logo": "https://api.iconify.design/lucide:leaf.svg",
+        "banner": "https://images.unsplash.com/photo-1448375240586-882707db888b"
+      },
+      {
+        "name": "Beach Holidays & Island Escapes",
+        "description": "Find tropical beaches, island destinations, coastal villages, snorkeling spots, seaside resorts, and peaceful escapes beside the ocean.",
+        "logo": "https://api.iconify.design/lucide:palmtree.svg",
+        "banner": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+      },
+      {
+        "name": "Mountain Travel & Retreats",
+        "description": "Explore mountain towns, alpine landscapes, scenic viewpoints, peaceful retreats, and unforgettable journeys into the world's highlands.",
+        "logo": "https://api.iconify.design/lucide:mountain-snow.svg",
+        "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      },
+      {
+        "name": "Desert Travel & Expeditions",
+        "description": "Discover vast deserts, sand dunes, desert safaris, stargazing spots, traditional desert camps, and expeditions through extraordinary landscapes.",
+        "logo": "https://api.iconify.design/lucide:sun.svg",
+        "banner": "https://images.unsplash.com/photo-1509316785289-025f5b846b35"
+      },
+      {
+        "name": "Winter Travel & Snow Adventures",
+        "description": "Share snowy destinations, winter escapes, ski resorts, snowboarding experiences, ice hotels, and tips for traveling in cold climates.",
+        "logo": "https://api.iconify.design/lucide:snowflake.svg",
+        "banner": "https://images.unsplash.com/photo-1418985991508-e47386d96a71"
+      },
+      {
+        "name": "Skiing & Snowboarding Trips",
+        "description": "Connect with winter sports enthusiasts to discover ski destinations, mountain resorts, slope recommendations, equipment tips, and snow adventures.",
+        "logo": "https://api.iconify.design/lucide:mountain-snow.svg",
+        "banner": "https://images.unsplash.com/photo-1517299321609-52687d1bc55a"
+      },
+      {
+        "name": "Cruise Travel",
+        "description": "Explore ocean cruises, river cruises, cruise itineraries, shore excursions, onboard experiences, and advice for choosing the perfect voyage.",
+        "logo": "https://api.iconify.design/lucide:ship.svg",
+        "banner": "https://images.unsplash.com/photo-1548574505-5e239809ee19"
+      },
+      {
+        "name": "Train Journeys & Rail Adventures",
+        "description": "Discover scenic rail routes, sleeper trains, luxury rail journeys, cross-country adventures, and remarkable destinations connected by railway.",
+        "logo": "https://api.iconify.design/lucide:train-front.svg",
+        "banner": "https://images.unsplash.com/photo-1474487548417-781cb71495f3"
+      },
+      {
+        "name": "Air Travel & Aviation",
+        "description": "Discuss airlines, flight routes, airport experiences, cabin classes, aviation curiosities, and practical tips for smoother journeys through the skies.",
+        "logo": "https://api.iconify.design/lucide:plane-takeoff.svg",
+        "banner": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+      },
+      {
+        "name": "Van Life & Campervan Travel",
+        "description": "For travelers who love life on the road, sharing campervan conversions, van-life routes, overnight parking tips, and freedom-filled adventures.",
+        "logo": "https://api.iconify.design/lucide:caravan.svg",
+        "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      },
+      {
+        "name": "Digital Nomads & Remote Work Travel",
+        "description": "Discover work-friendly destinations, coworking spaces, digital nomad hubs, long-stay options, and ways to balance remote work with exploration.",
+        "logo": "https://api.iconify.design/lucide:laptop.svg",
+        "banner": "https://images.unsplash.com/photo-1497250681960-ef046c08a56e"
+      },
+      {
+        "name": "Slow Travel & Long Stays",
+        "description": "Embrace meaningful journeys by spending more time in fewer places, connecting with local communities, and experiencing everyday life beyond tourism.",
+        "logo": "https://api.iconify.design/lucide:hourglass.svg",
+        "banner": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+      },
+      {
+        "name": "Weekend Getaways & Short Trips",
+        "description": "Find inspiring destinations for quick escapes, spontaneous adventures, nearby attractions, and refreshing trips that fit into a busy schedule.",
+        "logo": "https://api.iconify.design/lucide:calendar-days.svg",
+        "banner": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+      },
+      {
+        "name": "City Breaks & Urban Exploration",
+        "description": "Explore vibrant cities through their architecture, neighborhoods, museums, nightlife, shopping districts, public spaces, and local culture.",
+        "logo": "https://api.iconify.design/lucide:building-2.svg",
+        "banner": "https://images.unsplash.com/photo-1519501025264-65ba15a82390"
+      },
+      {
+        "name": "Hidden Gems & Offbeat Destinations",
+        "description": "Discover lesser-known villages, secret viewpoints, unusual attractions, remote destinations, and underrated places away from crowded tourist routes.",
+        "logo": "https://api.iconify.design/lucide:map-pin.svg",
+        "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b"
+      },
+      {
+        "name": "Pilgrimage & Spiritual Journeys",
+        "description": "Share experiences from sacred sites, pilgrimage routes, spiritual retreats, religious landmarks, and journeys centered on reflection and personal meaning.",
+        "logo": "https://api.iconify.design/lucide:flower-2.svg",
+        "banner": "https://images.unsplash.com/photo-1548013146-72479768bada"
+      },
+      {
+        "name": "Festival & Event Travel",
+        "description": "Plan trips around music festivals, cultural celebrations, carnivals, sporting events, seasonal festivities, and once-in-a-lifetime gatherings.",
+        "logo": "https://api.iconify.design/lucide:sparkles.svg",
+        "banner": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea"
+      },
+      {
+        "name": "Photography & Travel Filmmaking",
+        "description": "Share photography locations, travel filmmaking techniques, camera gear, composition ideas, and creative ways to capture the world's most memorable places.",
+        "logo": "https://api.iconify.design/lucide:camera.svg",
+        "banner": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d"
+      },
+      {
+        "name": "Travel Planning & Itineraries",
+        "description": "Exchange destination guides, detailed itineraries, route plans, booking strategies, travel checklists, and advice for organizing stress-free journeys.",
+        "logo": "https://api.iconify.design/lucide:map.svg",
+        "banner": "https://images.unsplash.com/photo-1455390582262-044cdead277a"
+      },
+      {
+        "name": "Travel Deals & Points",
+        "description": "Discover flight deals, hotel discounts, loyalty programs, reward points, travel promotions, and legitimate strategies for getting better value on trips.",
+        "logo": "https://api.iconify.design/lucide:percent.svg",
+        "banner": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
+      },
+      {
+        "name": "International Travel & Border Crossing",
+        "description": "Discuss international routes, entry requirements, border crossings, travel documentation, local transportation, and practical preparation for overseas journeys.",
+        "logo": "https://api.iconify.design/lucide:globe.svg",
+        "banner": "https://images.unsplash.com/photo-1488646953014-85cb44e25828"
+      },
+      {
+        "name": "Responsible & Sustainable Travel",
+        "description": "Learn how to reduce travel impacts, support local businesses, respect cultural traditions, protect natural environments, and make more thoughtful travel choices.",
+        "logo": "https://api.iconify.design/lucide:leaf.svg",
+        "banner": "https://images.unsplash.com/photo-1472396961693-142e6e269027"
+      }
+    ]
+  }
+]

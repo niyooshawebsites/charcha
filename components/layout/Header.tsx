@@ -12,7 +12,6 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import ForumIcon from "@mui/icons-material/Forum";
 import QuickreplyIcon from "@mui/icons-material/Quickreply";
 import Link from "next/link";
 
@@ -23,15 +22,15 @@ const pages = [
   },
   {
     name: "Register",
-    link: "/register",
+    link: "/auth/register",
   },
   {
     name: "Forgot Password",
-    link: "/forgot-password",
+    link: "/auth/forgot-password",
   },
   {
     name: "Reset Password",
-    link: "/reset-password/fgfgf",
+    link: "/auth/reset-password/fgfgf",
   },
 ];
 

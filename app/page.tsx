@@ -1,6 +1,6 @@
-import { LoginPage } from "@/app/(auth)/login/page";
+import { LoginPage } from "@/app/(public)/auth/login/page";
 import { Stack } from "@mui/material";
-import MainPage from "./(main)/page";
+import MainPage from "./(protected)/(main)/page";
 
 const isLoggedIn = true;
 
