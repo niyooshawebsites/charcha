@@ -16,7 +16,7 @@ const LanePage = () => {
       spacing={3}
       className="bg-gray-50 min-h-screen p-5 my-3 rounded-2xl border border-gray-100"
     >
-      <Grid size={2}>
+      <Grid size={2} className="">
         <Typography variant="h6">Create Lane</Typography>
         <CreateLane />
 
@@ -26,10 +26,12 @@ const LanePage = () => {
         <Typography variant="h6">Quick Links</Typography>
         <QuickLinks pages={pages} />
       </Grid>
+
       <Grid size={7}>
         <ActionBar />
         <Feed />
       </Grid>
+
       <Grid size={3}>
         <Typography variant="h6">Advertisements</Typography>
         <AdTile src="/images/coke.jpg" />
