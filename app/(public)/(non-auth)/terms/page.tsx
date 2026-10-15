@@ -1,27 +1,27 @@
-import {
-  Box,
-  Stack,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { Stack, Typography, List, ListItem, ListItemText } from "@mui/material";
 
 const TermsPage = () => {
   return (
-    <Stack direction="column" spacing={3}>
-      <Box>
-        <Typography component="h3">Terms of Service</Typography>
+    <Stack
+      direction="column"
+      spacing={3}
+      className="p-5 bg-blue-50 my-3 rounded-2xl"
+    >
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h3" className="text-blue-500">
+          Terms of Service
+        </Typography>
         <Typography className="text-sm text-gray-500">
           Last updated: October 14, 2026
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Introduction</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Introduction</Typography>
         <Typography>
-          Welcome to Fast Lane! These Terms of Service {"(Terms)"} govern your
-          access to and use of our website, application, and related services.
+          Welcome to {`${process.env.NEXT_PUBLIC_APP_NAME}`}! These Terms of
+          Service {"(Terms)"} govern your access to and use of our website,
+          application, and related services.
         </Typography>
 
         <Typography>
@@ -34,10 +34,10 @@ const TermsPage = () => {
           These Terms should be read together with our Privacy Policy and any
           applicable Community Guidelines.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">
           Eligibility and Account Registration
         </Typography>
         <Typography>
@@ -75,14 +75,14 @@ const TermsPage = () => {
           You must not impersonate another person, create fraudulent accounts,
           or use misleading information to deceive other users.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Purpose of Our Platform</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Purpose of Our Platform</Typography>
         <Typography>
-          Fast Lane is a knowledge-sharing platform that allows users to ask
-          questions, share answers, publish content, participate in discussions,
-          and discover information.
+          {`${process.env.NEXT_PUBLIC_APP_NAME}`} is a knowledge-sharing
+          platform that allows users to ask questions, share answers, publish
+          content, participate in discussions, and discover information.
         </Typography>
 
         <Typography>
@@ -96,10 +96,10 @@ const TermsPage = () => {
           our platform should not replace professional medical, legal,
           financial, or other expert advice where such guidance is necessary.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">User Content and Ownership</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">User Content and Ownership</Typography>
         <Typography>
           You retain ownership of the content you create and submit to our
           platform, subject to any rights belonging to other parties.
@@ -107,11 +107,11 @@ const TermsPage = () => {
 
         <Typography>
           By publishing questions, answers, comments, images, or other content,
-          you grant Fast Lane a non-exclusive, worldwide, royalty-free license
-          to host, store, reproduce, display, distribute, and format that
-          content as reasonably necessary to operate, maintain, promote, and
-          improve the platform, subject to applicable law and your privacy
-          choices.
+          you grant {`${process.env.NEXT_PUBLIC_APP_NAME}`} a non-exclusive,
+          worldwide, royalty-free license to host, store, reproduce, display,
+          distribute, and format that content as reasonably necessary to
+          operate, maintain, promote, and improve the platform, subject to
+          applicable law and your privacy choices.
         </Typography>
 
         <Typography>
@@ -125,13 +125,14 @@ const TermsPage = () => {
           You are responsible for the content you publish. We reserve the right
           to remove content that violates these Terms or applicable law.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Community Guidelines</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Community Guidelines</Typography>
         <Typography>
-          We want Fast Lane to be a respectful, safe, and constructive
-          community. By using our platform, you agree not to:
+          We want {`${process.env.NEXT_PUBLIC_APP_NAME}`} to be a respectful,
+          safe, and constructive community. By using our platform, you agree not
+          to:
         </Typography>
 
         <List>
@@ -196,10 +197,10 @@ const TermsPage = () => {
           Violations may result in content removal, account restrictions,
           suspension, or termination, depending on the circumstances.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">
           Questions, Answers, and User Interactions
         </Typography>
         <Typography>
@@ -210,7 +211,7 @@ const TermsPage = () => {
         <Typography>
           You should evaluate information critically and verify important claims
           before relying on them. Opinions expressed by users do not necessarily
-          represent the views of Fast Lane.
+          represent the views of {`${process.env.NEXT_PUBLIC_APP_NAME}`}.
         </Typography>
 
         <Typography>
@@ -222,10 +223,10 @@ const TermsPage = () => {
           You agree to interact respectfully with other users and to report
           content that you reasonably believe violates our guidelines.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Content Moderation and Reporting</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Content Moderation and Reporting</Typography>
         <Typography>
           We may review reported content and user activity to enforce these
           Terms, protect our community, address abuse, and comply with
@@ -247,10 +248,10 @@ const TermsPage = () => {
           Users may report inappropriate content or suspected violations using
           available reporting tools or by contacting our support team.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Intellectual Property Rights</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Intellectual Property Rights</Typography>
         <Typography>
           The {"platform's"} branding, logos, design, software, layout, and
           original materials may be protected by intellectual property laws.
@@ -267,10 +268,10 @@ const TermsPage = () => {
           Third-party names, logos, and content remain the property of their
           respective owners.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Third-Party Links and Services</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Third-Party Links and Services</Typography>
         <Typography>
           Our platform may contain links to third-party websites, applications,
           or services for your convenience.
@@ -285,12 +286,10 @@ const TermsPage = () => {
           Your use of third-party services is at your own discretion and may be
           subject to their separate terms and privacy policies.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">
-          Account Suspension and Termination
-        </Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Account Suspension and Termination</Typography>
 
         <Typography>
           You may stop using our platform at any time. You may also request
@@ -342,10 +341,10 @@ const TermsPage = () => {
           legitimate retention requirements, and the handling of content already
           shared with others.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">
           Disclaimers and Limitation of Liability
         </Typography>
         <Typography>
@@ -359,7 +358,8 @@ const TermsPage = () => {
         </Typography>
 
         <Typography>
-          To the extent permitted by law, Fast Lane will not be liable for
+          To the extent permitted by law,{" "}
+          {`${process.env.NEXT_PUBLIC_APP_NAME}`} will not be liable for
           indirect, incidental, special, consequential, or punitive damages
           arising from your use of the platform.
         </Typography>
@@ -369,10 +369,10 @@ const TermsPage = () => {
           lawfully be excluded or limited, or any rights that cannot be waived
           under applicable consumer protection law.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">Changes to These Terms</Typography>
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">Changes to These Terms</Typography>
         <Typography>
           We may update these Terms from time to time to reflect changes in our
           services, operations, or legal obligations.
@@ -388,10 +388,10 @@ const TermsPage = () => {
           We encourage you to review these Terms periodically to remain informed
           about the rules governing your use of our platform.
         </Typography>
-      </Box>
+      </Stack>
 
-      <Box>
-        <Typography component="h4">
+      <Stack direction="column" spacing={2}>
+        <Typography variant="h5">
           Governing Law and Dispute Resolution
         </Typography>
         <Typography>
@@ -409,7 +409,7 @@ const TermsPage = () => {
           Nothing in this section limits any rights or remedies available to you
           under mandatory applicable law.
         </Typography>
-      </Box>
+      </Stack>
     </Stack>
   );
 };

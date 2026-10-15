@@ -14,13 +14,11 @@ const AboutPage = () => {
       </Stack>
 
       <Stack direction="column" spacing={2}>
-        <Typography variant="h6" className="text-purple-600">
-          Where Curiosity Meets Knowledge
-        </Typography>
+        <Typography variant="h6">Where Curiosity Meets Knowledge</Typography>
         <Typography>
-          Welcome to Fast Lane — a community where curiosity inspires
-          conversations, knowledge is shared, and everyone has something
-          valuable to contribute.
+          Welcome to {`${process.env.NEXT_PUBLIC_APP_NAME}`} — a community where
+          curiosity inspires conversations, knowledge is shared, and everyone
+          has something valuable to contribute.
         </Typography>
 
         <Typography>
@@ -32,15 +30,14 @@ const AboutPage = () => {
 
         <Typography>
           Whether {"you\'re"} looking for answers, sharing your expertise, or
-          simply exploring something new, Fast Lane is a place where learning
+          simply exploring something new,{" "}
+          {`${process.env.NEXT_PUBLIC_APP_NAME}`} is a place where learning
           never stops.
         </Typography>
       </Stack>
 
       <Stack direction="column" spacing={2}>
-        <Typography variant="h6" className="text-purple-600">
-          Our Vision
-        </Typography>
+        <Typography variant="h6">Our Vision</Typography>
 
         <Typography>
           We envision a world where knowledge has no boundaries, curiosity is
@@ -55,9 +52,7 @@ const AboutPage = () => {
       </Stack>
 
       <Stack direction="column" spacing={2}>
-        <Typography variant="h6" className="text-purple-600">
-          Our Values
-        </Typography>
+        <Typography variant="h6">Our Values</Typography>
 
         <Typography>
           Curiosity: We encourage people to ask questions, explore ideas, and
@@ -86,9 +81,7 @@ const AboutPage = () => {
       </Stack>
 
       <Stack direction="column" spacing={2}>
-        <Typography variant="h6" className="text-purple-600">
-          Join Our Community
-        </Typography>
+        <Typography variant="h6">Join Our Community</Typography>
 
         <Typography>
           Great ideas often begin with a simple question. Your next question
@@ -97,9 +90,9 @@ const AboutPage = () => {
         </Typography>
 
         <Typography>
-          Become part of Fast Lane today. Ask questions, share what you know,
-          discover new ideas, and help build a community driven by curiosity and
-          knowledge.
+          Become part of {`${process.env.NEXT_PUBLIC_APP_NAME}`} today. Ask
+          questions, share what you know, discover new ideas, and help build a
+          community driven by curiosity and knowledge.
         </Typography>
 
         <Typography className="font-extrabold">

@@ -99,7 +99,7 @@ const Header = () => {
             href="/"
             className="mr-4 hidden md:flex font-inherit tracking-[.3rem] text-inherit no-underline"
           >
-            FAST LANE
+            {`${process.env.NEXT_PUBLIC_APP_NAME}`}
           </Typography>
 
           <Box className="flex grow md:hidden">
@@ -146,7 +146,7 @@ const Header = () => {
             href="#app-bar-with-responsive-menu"
             className="mr-2 flex md:hidden grow font-inherit tracking-[.3rem] text-inherit no-underline"
           >
-            FAST LANE
+            {`${process.env.NEXT_PUBLIC_APP_NAME}`}
           </Typography>
 
           <Box className="hidden md:flex grow">

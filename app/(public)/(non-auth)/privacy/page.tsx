@@ -2,9 +2,16 @@ import { Stack, Typography, List, ListItem, ListItemText } from "@mui/material";
 
 const PrivacyPage = () => {
   return (
-    <Stack direction="column" spacing={3}>
+    <Stack
+      direction="column"
+      spacing={3}
+      className="p-5 bg-blue-50 my-3 rounded-2xl"
+    >
       <Stack direction="column" spacing={2}>
-        <Typography variant="h3">Privacy Policy</Typography>
+        <Typography variant="h3" className="text-blue-500">
+          Privacy Policy
+        </Typography>
+
         <Typography className="text-sm text-gray-500">
           Last updated: October 14, 2026
         </Typography>
@@ -13,8 +20,9 @@ const PrivacyPage = () => {
       <Stack direction="column" spacing={2}>
         <Typography variant="h5">Introduction</Typography>
         <Typography>
-          Welcome to Fast Lane. Your privacy is important to us, and we are
-          committed to protecting your personal information.
+          Welcome to {`${process.env.NEXT_PUBLIC_APP_NAME}`}. Your privacy is
+          important to us, and we are committed to protecting your personal
+          information.
         </Typography>
 
         <Typography>
@@ -24,9 +32,9 @@ const PrivacyPage = () => {
         </Typography>
 
         <Typography>
-          By using Fast Lane, you agree to the practices described in this
-          Privacy Policy. If you do not agree with this policy, please
-          discontinue using our services.
+          By using {`${process.env.NEXT_PUBLIC_APP_NAME}`}, you agree to the
+          practices described in this Privacy Policy. If you do not agree with
+          this policy, please discontinue using our services.
         </Typography>
       </Stack>
 
@@ -37,7 +45,7 @@ const PrivacyPage = () => {
           platform.
         </Typography>
 
-        <Typography variant="abcd101">Personal Information</Typography>
+        <Typography variant="h6">Personal Information</Typography>
 
         <Typography>
           When you create an account or use certain features, we may collect
@@ -66,7 +74,7 @@ const PrivacyPage = () => {
           </ListItem>
         </List>
 
-        <Typography variant="abcd101">User-Generated Content</Typography>
+        <Typography variant="h6">User-Generated Content</Typography>
 
         <Typography>
           We collect and store the content you submit to our platform,
@@ -100,7 +108,7 @@ const PrivacyPage = () => {
           you make public may be visible to other users.
         </Typography>
 
-        <Typography variant="abcd101">Technical Information</Typography>
+        <Typography variant="h6">Technical Information</Typography>
 
         <Typography>
           When you access our platform, we may collect certain technical
@@ -133,7 +141,7 @@ const PrivacyPage = () => {
           We use this information to maintain, secure, and improve our services.
         </Typography>
 
-        <Typography variant="abcd101">Cookies and Similar Technologies</Typography>
+        <Typography variant="h6">Cookies and Similar Technologies</Typography>
 
         <Typography>
           We may use cookies or similar technologies to maintain login sessions,
@@ -213,9 +221,10 @@ const PrivacyPage = () => {
       <Stack direction="column" spacing={2}>
         <Typography variant="h5">Public Information and Content</Typography>
         <Typography>
-          Fast Lane is a knowledge-sharing platform. Content you choose to
-          publish publicly, including questions, answers, comments, and public
-          profile information, may be viewed, copied, or shared by other people.
+          {`${process.env.NEXT_PUBLIC_APP_NAME}`} is a knowledge-sharing
+          platform. Content you choose to publish publicly, including questions,
+          answers, comments, and public profile information, may be viewed,
+          copied, or shared by other people.
         </Typography>
 
         <Typography>
@@ -237,7 +246,7 @@ const PrivacyPage = () => {
           We may share information in the following circumstances:
         </Typography>
 
-        <Typography variant="abcd101">Service Providers</Typography>
+        <Typography variant="h6">Service Providers</Typography>
         <Typography>
           We may share relevant information with trusted service providers that
           help us operate our platform, such as hosting providers, email
@@ -249,21 +258,21 @@ const PrivacyPage = () => {
           appropriate contractual or other safeguards.
         </Typography>
 
-        <Typography variant="abcd101">Legal Requirements</Typography>
+        <Typography variant="h6">Legal Requirements</Typography>
         <Typography>
           We may disclose information when required by applicable law,
           regulation, legal process, or a valid request from an authorized
           authority.
         </Typography>
 
-        <Typography variant="abcd101">Safety and Security</Typography>
+        <Typography variant="h6">Safety and Security</Typography>
         <Typography>
           We may use or disclose relevant information when reasonably necessary
           to investigate abuse, prevent fraud, protect users, or safeguard our
           platform and legal rights.
         </Typography>
 
-        <Typography variant="abcd101">Business Transfers</Typography>
+        <Typography variant="h6">Business Transfers</Typography>
         <Typography>
           If our platform is involved in a merger, acquisition, restructuring,
           or sale of assets, relevant information may be transferred as part of
