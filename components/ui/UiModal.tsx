@@ -4,8 +4,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import AskForm from "../form/AskForm";
 import AnswerForm from "../form/AnswerForm";
 import PostForm from "../form/PostForm";
+import CommentForm from "../comment/comment-form";
 
-export type ActionType = "ask" | "answer" | "post";
+export type ActionType = "ask" | "answer" | "post" | "comment";
 
 interface ModalProps {
   open: boolean;
@@ -26,6 +27,10 @@ const modalConfig = {
     title: "Create a Post",
     description: "Share an update with the community.",
   },
+  comment: {
+    title: "Leave a comment",
+    description: "Your opinion matters.",
+  },
 };
 
 const renderForm = (type: ActionType) => {
@@ -38,6 +43,9 @@ const renderForm = (type: ActionType) => {
 
     case "post":
       return <PostForm />;
+
+    case "comment":
+      return <CommentForm />;
 
     default:
       return null;

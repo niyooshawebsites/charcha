@@ -14,13 +14,12 @@ const ActionBar = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeAction, setActiveAction] = useState<ActionType | null>(null);
 
-  const handleOpenModal = (action: ActionType) => {
-    console.log("Opening modal:", action);
+  const handleOpenModal = (action: ActionType): void => {
     setActiveAction(action);
     setModalOpen(true);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (): void => {
     setModalOpen(false);
   };
 
