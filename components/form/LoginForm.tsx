@@ -12,7 +12,7 @@ import Link from "next/link";
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
-  const toggleShowPassword = () => {
+  const toggleShowPassword = ():void => {
     setShowPassword((prev) => !prev);
   };
 

@@ -1,6 +1,9 @@
 import { Typography, Modal, Box, IconButton } from "@mui/material";
 import UiCard from "./UiCard";
 import CloseIcon from "@mui/icons-material/Close";
+import AskForm from "../form/AskForm";
+import AnswerForm from "../form/AnswerForm";
+import PostForm from "../form/PostForm";
 
 export type ActionType = "ask" | "answer" | "post";
 
@@ -25,6 +28,22 @@ const modalConfig = {
   },
 };
 
+const renderForm = (type: ActionType) => {
+  switch (type) {
+    case "ask":
+      return <AskForm />;
+
+    case "answer":
+      return <AnswerForm />;
+
+    case "post":
+      return <PostForm />;
+
+    default:
+      return null;
+  }
+};
+
 const UiModal = ({ open, onClose, type }: ModalProps) => {
   if (!type) return null;
 
@@ -32,28 +51,21 @@ const UiModal = ({ open, onClose, type }: ModalProps) => {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] bg-blue-100 border-2 border-blue-600 p-4 shadow rounded-lg">
+      <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800] bg-blue-100 border-2 border-blue-600 p-4 shadow rounded-lg">
         <Box className="flex justify-between mb-2">
           <Typography variant="h6" className="mb-1">
             {config.title}
           </Typography>
-          {/* <UiButton
-            type="button"
-            variant="contained"
-            color="primary"
-            btnText="X"
-            fullWidth={false}
-            onClick={onClose}
-          /> */}
           <IconButton className="absolute top-2 right-2" onClick={onClose}>
             <CloseIcon />
           </IconButton>
         </Box>
 
         <UiCard>
-          <Typography className="text-gray-700">
+          <Typography className="text-gray-700 mb-5">
             {config.description}
           </Typography>
+          {renderForm(type)}
         </UiCard>
       </Box>
     </Modal>
