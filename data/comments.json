@@ -1,0 +1,102 @@
+[
+  {
+    "id": "comment001",
+    "comment": "This place is absolutely beautiful! The views are breathtaking, and the atmosphere is so peaceful.",
+    "createdAt": "May 26, 2026",
+    "user": {
+      "id": "user001",
+      "name": "TravelExplorer",
+      "profileImage": "profile1.jpg"
+    }
+  },
+  {
+    "id": "comment002",
+    "comment": "One of the best travel destinations I've ever visited. Definitely worth adding to your bucket list!",
+    "createdAt": "May 27, 2026",
+    "user": {
+      "id": "user002",
+      "name": "Wanderlust",
+      "profileImage": "profile2.jpg"
+    }
+  },
+  {
+    "id": "comment003",
+    "comment": "The scenery here looks like something straight out of a postcard. I would love to visit again!",
+    "createdAt": "May 28, 2026",
+    "user": {
+      "id": "user003",
+      "name": "AdventureSeeker",
+      "profileImage": "profile3.jpg"
+    }
+  },
+  {
+    "id": "comment004",
+    "comment": "Such a wonderful place to relax and escape from the busy routine of everyday life.",
+    "createdAt": "May 29, 2026",
+    "user": {
+      "id": "user004",
+      "name": "NatureLover",
+      "profileImage": "profile4.jpg"
+    }
+  },
+  {
+    "id": "comment005",
+    "comment": "The local culture, delicious food, and stunning views make this destination truly special.",
+    "createdAt": "May 30, 2026",
+    "user": {
+      "id": "user005",
+      "name": "GlobeTrotter",
+      "profileImage": "profile5.jpg"
+    }
+  },
+  {
+    "id": "comment006",
+    "comment": "I can already imagine spending an entire weekend exploring every corner of this amazing place!",
+    "createdAt": "May 31, 2026",
+    "user": {
+      "id": "comment006user",
+      "name": "HappyTraveler",
+      "profileImage": "profile6.jpg"
+    }
+  },
+  {
+    "id": "comment007",
+    "comment": "The sunsets here must be magical. Adding this destination to my travel plans!",
+    "createdAt": "June 1, 2026",
+    "user": {
+      "id": "user007",
+      "name": "SunsetChaser",
+      "profileImage": "profile7.jpg"
+    }
+  },
+  {
+    "id": "comment008",
+    "comment": "A perfect destination for adventure lovers and anyone who enjoys exploring new places.",
+    "createdAt": "June 2, 2026",
+    "user": {
+      "id": "user008",
+      "name": "AdventureBuddy",
+      "profileImage": "profile8.jpg"
+    }
+  },
+  {
+    "id": "comment009",
+    "comment": "The natural beauty of this destination is incredible. Every picture looks like a masterpiece!",
+    "createdAt": "June 3, 2026",
+    "user": {
+      "id": "user009",
+      "name": "PhotoJourney",
+      "profileImage": "profile9.jpg"
+    }
+  },
+  {
+    "id": "comment010",
+    "comment": "Traveling to places like this reminds us how beautiful the world really is. Absolutely stunning!",
+    "createdAt": "June 4, 2026",
+    "user": {
+      "id": "user010",
+      "name": "DreamTraveler",
+      "profileImage": "profile10.jpg"
+    }
+  }
+]

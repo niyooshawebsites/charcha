@@ -29,7 +29,7 @@ const UserInfo = () => {
               </Typography>
             </Stack>
           }
-          secondary="Lived in Kolkata, West Bengal, India Oct 6"
+          secondary="Lives in Kolkata, West Bengal, India"
         />
       </ListItem>
     </List>

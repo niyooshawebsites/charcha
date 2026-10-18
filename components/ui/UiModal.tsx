@@ -4,7 +4,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import AskForm from "../form/AskForm";
 import AnswerForm from "../form/AnswerForm";
 import PostForm from "../form/PostForm";
-import CommentForm from "../comment/comment-form";
+import CommentForm from "../form/CommentForm";
+import CommentList from "../comment/CommentList";
 
 export type ActionType = "ask" | "answer" | "post" | "comment";
 
@@ -45,7 +46,12 @@ const renderForm = (type: ActionType) => {
       return <PostForm />;
 
     case "comment":
-      return <CommentForm />;
+      return (
+        <>
+          <CommentForm />
+          <CommentList />
+        </>
+      );
 
     default:
       return null;

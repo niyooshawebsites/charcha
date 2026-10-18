@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import ShareButton from "./components/ShareButton";
 import LikeButton from "./components/LikeButton";
 import MoreOptionsButton from "./components/MoreOptionsButton";
-import CommentsButton from "./components/CommentsButton";
+import CommentsButton from "./components/CommentButton";
 import DisLikeButton from "./components/DisLikeButton";
 import UserInfo from "./components/UserInfo";
 import HideFeedItemButton from "./components/HideFeedItemButton";

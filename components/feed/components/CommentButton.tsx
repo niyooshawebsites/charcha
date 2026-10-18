@@ -7,7 +7,7 @@ import CommentIcon from "@mui/icons-material/Comment";
 import { ActionType } from "@/components/ui/UiModal";
 import UiModal from "@/components/ui/UiModal";
 
-const CommentsButton = () => {
+const CommentButton = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [activeAction, setActiveAction] = useState<ActionType | null>(null);
 
@@ -43,4 +43,4 @@ const CommentsButton = () => {
   );
 };
 
-export default CommentsButton;
+export default CommentButton;
