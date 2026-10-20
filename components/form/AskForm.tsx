@@ -27,7 +27,7 @@ const AskForm = () => {
           type="submit"
           variant="contained"
           color="primary"
-          btnText="Ask"
+          btnText="Create Lane"
           fullWidth={true}
         />
       </Stack>

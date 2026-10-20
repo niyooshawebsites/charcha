@@ -6,6 +6,7 @@ import AnswerForm from "../form/AnswerForm";
 import PostForm from "../form/PostForm";
 import CommentForm from "../form/CommentForm";
 import CommentList from "../comment/CommentList";
+import CreateLaneForm from "../form/CreateLaneForm";
 
 export type ActionType = "ask" | "answer" | "post" | "comment" | "createLane";
 
@@ -34,7 +35,8 @@ const modalConfig = {
   },
   createLane: {
     title: "Create your own lane",
-    description: "Describe your lane",
+    description:
+      "Share your interests, curate content, host discussions, and more.",
   },
 };
 
@@ -56,6 +58,9 @@ const renderForm = (type: ActionType) => {
           <CommentList />
         </>
       );
+
+    case "createLane":
+      return <CreateLaneForm />;
 
     default:
       return null;
