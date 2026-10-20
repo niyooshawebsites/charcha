@@ -35,13 +35,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeRegistry>
-            <Box className="min-h-screen flex flex-col justify-between items-center">
-              <Box className="w-full sticky top-0 left-0 z-100">
+            <Box className="max-h-screen flex flex-col justify-between items-center">
+              <Box className="w-full sticky top-0 left-0 z-100 h-[50vh]">
                 <Header />
                 {isLoggedIn ? <LoggedInHeader /> : null}
               </Box>
 
-              <Container>{children}</Container>
+              <Container className="h-9/12">{children}</Container>
 
               <Footer />
             </Box>

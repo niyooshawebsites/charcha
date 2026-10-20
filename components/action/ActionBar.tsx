@@ -25,7 +25,7 @@ const ActionBar = () => {
 
   return (
     <>
-      <Grid container spacing={2} className="bg-blue-50 p-3 rounded-md">
+      <Grid container spacing={2} className="bg-blue-50 p-3 rounded-md ">
         <Grid size={12}>
           <SearchForm />
         </Grid>

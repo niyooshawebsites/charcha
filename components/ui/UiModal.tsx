@@ -7,7 +7,7 @@ import PostForm from "../form/PostForm";
 import CommentForm from "../form/CommentForm";
 import CommentList from "../comment/CommentList";
 
-export type ActionType = "ask" | "answer" | "post" | "comment";
+export type ActionType = "ask" | "answer" | "post" | "comment" | "createLane";
 
 interface ModalProps {
   open: boolean;
@@ -31,6 +31,10 @@ const modalConfig = {
   comment: {
     title: "Leave a comment",
     description: "Your opinion matters.",
+  },
+  createLane: {
+    title: "Create your own lane",
+    description: "Describe your lane",
   },
 };
 
