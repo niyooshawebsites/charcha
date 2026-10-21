@@ -5,7 +5,7 @@ import SearchForm from "../form/SearchForm";
 import { Grid } from "@mui/material";
 import UiButton from "../ui/UiButton";
 import QuizIcon from "@mui/icons-material/Quiz";
-import QuickreplyIcon from "@mui/icons-material/Quickreply";
+import ReplyIcon from "@mui/icons-material/Reply";
 import PostAddIcon from "@mui/icons-material/PostAdd";
 import UiModal from "../ui/UiModal";
 import type { ActionType } from "../ui/UiModal";
@@ -48,7 +48,7 @@ const ActionBar = () => {
             variant="outlined"
             btnText="Answer"
             color="secondary"
-            icon={<QuickreplyIcon />}
+            icon={<ReplyIcon />}
             fullWidth={true}
             onClick={() => handleOpenModal("answer")}
           />

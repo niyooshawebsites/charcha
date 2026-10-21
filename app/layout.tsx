@@ -37,8 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <ThemeRegistry>
             <Box className="max-h-screen flex flex-col justify-between items-center">
               <Box className="w-full sticky top-0 left-0 z-100 h-[50vh]">
-                <Header />
-                {isLoggedIn ? <LoggedInHeader /> : null}
+                {isLoggedIn ? <LoggedInHeader /> : <Header />}
               </Box>
 
               <Container className="h-9/12">{children}</Container>
