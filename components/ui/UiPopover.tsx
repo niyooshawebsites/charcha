@@ -16,17 +16,7 @@ interface UiPopoverProps {
   type: PopoverType | null;
 }
 
-const renderPopover = ({
-  title,
-  description,
-  laneImage,
-  followers,
-  contributors,
-  anchorEl,
-  open,
-  onClose,
-  type: PopoverType,
-}: UiPopoverProps) => {
+const renderPopover = (type: PopoverType) => {
   switch (type) {
     case "post":
       return (
