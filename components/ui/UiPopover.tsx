@@ -1,8 +1,10 @@
 import { Stack, Box, Typography, Popover } from "@mui/material";
-import UiButton from "./UiButton";
-import Image from "next/image";
+import LanePopover from "../popover/LanePopover";
+import UserPopover from "../popover/UserPopover";
 
-interface UiPopperProps {
+export type PopoverType = "post" | "user";
+
+interface UiPopoverProps {
   title: string;
   description: string;
   laneImage: string;
@@ -11,7 +13,42 @@ interface UiPopperProps {
   anchorEl: HTMLElement | null;
   open: boolean;
   onClose: () => void;
+  type: PopoverType | null;
 }
+
+const renderPopover = ({
+  title,
+  description,
+  laneImage,
+  followers,
+  contributors,
+  anchorEl,
+  open,
+  onClose,
+  type: PopoverType,
+}: UiPopoverProps) => {
+  switch (type) {
+    case "post":
+      return (
+        <LanePopover
+          title={title}
+          description={description}
+          laneImage={laneImage}
+          followers={followers}
+          contributors={contributors}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={onClose}
+        />
+      );
+
+    case "user":
+      return <UserPopover />;
+
+    default:
+      return null;
+  }
+};
 
 const UiPopover = ({
   title,
@@ -22,52 +59,23 @@ const UiPopover = ({
   anchorEl,
   open,
   onClose,
-}: UiPopperProps) => {
-  const isOpen = Boolean(open);
+  type,
+}: UiPopoverProps) => {
+  if (!type) return null;
   return (
-    <Popover
-      anchorEl={anchorEl}
-      open={isOpen}
-      onClose={onClose}
-      className=" mt-15"
-    >
-      <Stack
-        direction="column"
-        spacing={2}
-        className="p-5 bg-gray-900 text-gray-100 rounded-lg"
-      >
-        <Box className="flex justify-start items-center gap-2">
-          <Box>
-            <Image
-              src={laneImage}
-              alt={title}
-              width={100}
-              height={100}
-              className="border rounded-lg"
-            />
-          </Box>
-          <Box>
-            <Typography variant="h6">{title}</Typography>
-            <Typography className="text-sm text-gray-500">
-              {description}
-            </Typography>
-          </Box>
-        </Box>
-
-        <Box className="flex justify-between">
-          <Typography>Contributors: {contributors}</Typography>
-          <Typography>Followers: {followers}</Typography>
-        </Box>
-
-        <UiButton
-          type="button"
-          variant="contained"
-          color="primary"
-          btnText="Follow"
-          fullWidth={false}
-        />
-      </Stack>
-    </Popover>
+    <>
+      {renderPopover({
+        title,
+        description,
+        laneImage,
+        followers,
+        contributors,
+        anchorEl,
+        open,
+        onClose,
+        type,
+      })}
+    </>
   );
 };
 
