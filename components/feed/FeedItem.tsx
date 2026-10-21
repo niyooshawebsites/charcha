@@ -5,7 +5,7 @@ import LikeButton from "./components/LikeButton";
 import MoreOptionsButton from "./components/MoreOptionsButton";
 import CommentsButton from "./components/CommentButton";
 import DisLikeButton from "./components/DisLikeButton";
-import UserInfo from "./components/UserInfo";
+import QuickLaneInfo from "./components/QuickLaneInfo";
 import HideFeedItemButton from "./components/HideFeedItemButton";
 import FeedItemContent from "./components/FeedItemContent";
 import FeedItemImage from "./components/FeedItemImage";
@@ -15,7 +15,7 @@ const FeedItem = () => {
     <UiCard customClass="w-full rounded-xl my-5 relative">
       <Grid container spacing={2}>
         <Grid size={10}>
-          <UserInfo />
+          <QuickLaneInfo />
         </Grid>
         <Grid size={2}>
           <HideFeedItemButton />

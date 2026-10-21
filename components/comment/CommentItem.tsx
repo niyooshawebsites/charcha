@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import UserInfo from "../feed/components/UserInfo";
+import UserInfo from "../feed/components/QuickLaneInfo";
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import LikeButton from "../feed/components/LikeButton";
 import DisLikeButton from "../feed/components/DisLikeButton";

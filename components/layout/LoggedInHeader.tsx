@@ -5,7 +5,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import QuickreplyIcon from "@mui/icons-material/Quickreply";
 import HomeIcon from "@mui/icons-material/Home";
-import GroupsIcon from "@mui/icons-material/Groups";
 import ReplyIcon from "@mui/icons-material/Reply";
 import ForumIcon from "@mui/icons-material/Forum";
 import QuizIcon from "@mui/icons-material/Quiz";
