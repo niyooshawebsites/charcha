@@ -12,10 +12,11 @@ import {
 } from "@mui/material";
 import UiPopover from "@/components/ui/UiPopover";
 import user from "@/data/user.json";
+import type { PopoverType } from "@/components/ui/UiPopover";
 
 const QuickLaneInfo = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [popoverType, setPopoverType] = useState<string>("post");
+  const [popoverType, setPopoverType] = useState<PopoverType>("post");
 
   const handlePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(e.currentTarget);
@@ -25,6 +26,7 @@ const QuickLaneInfo = () => {
     if (e.currentTarget.id == "laneTitle") {
       setPopoverType("post");
     }
+
     if (e.currentTarget.id == "postUser") {
       setPopoverType("user");
     }
@@ -51,9 +53,9 @@ const QuickLaneInfo = () => {
                   variant="h6"
                   className="text-blue-500 hover:underline cursor-pointer"
                   id="laneTitle"
-                  onMouseEnter={() => {
-                    handlePopoverOpen;
-                    handlePopoverTypeChange;
+                  onMouseEnter={(e) => {
+                    handlePopoverOpen(e);
+                    handlePopoverTypeChange(e);
                   }}
                 >
                   The journey to the end of the Earth
@@ -78,9 +80,9 @@ const QuickLaneInfo = () => {
                   variant="body2"
                   className="font-semibold text-blue-500 hover:underline cursor-pointer"
                   id="postUser"
-                  onMouseEnter={() => {
-                    handlePopoverOpen;
-                    handlePopoverTypeChange;
+                  onMouseEnter={(e) => {
+                    handlePopoverOpen(e);
+                    handlePopoverTypeChange(e);
                   }}
                 >
                   Babai Bose
@@ -105,7 +107,7 @@ const QuickLaneInfo = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handlePopoverClose}
-        type="post"
+        type={popoverType}
       />
     </>
   );

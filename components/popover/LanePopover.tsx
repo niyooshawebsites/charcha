@@ -2,8 +2,6 @@ import { Stack, Box, Typography, Popover } from "@mui/material";
 import UiButton from "../ui/UiButton";
 import Image from "next/image";
 
-
-
 interface LanePopoverProps {
   title: string;
   description: string;
@@ -25,7 +23,7 @@ const LanePopover = ({
   open,
   onClose,
 }: LanePopoverProps) => (
-  <Popover anchorEl={anchorEl} open={open} onClose={onClose} className=" mt-15">
+  <Popover anchorEl={anchorEl} open={open} onClose={onClose} className=" mt-10">
     <Stack
       direction="column"
       spacing={2}

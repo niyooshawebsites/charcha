@@ -30,7 +30,7 @@ const UserPopover = ({
   open,
   onClose,
 }: UserPopoverProps) => (
-  <Popover anchorEl={anchorEl} open={open} onClose={onClose} className=" mt-15">
+  <Popover anchorEl={anchorEl} open={open} onClose={onClose} className=" mt-5">
     <Stack
       direction="column"
       spacing={2}
@@ -54,7 +54,7 @@ const UserPopover = ({
         </Box>
       </Box>
 
-      <Box className="flex justify-between">
+      <Box className="flex flex-col justify-between">
         <Typography>Active lanes: {activeLanes}</Typography>
         <Typography>Followers: {followers}</Typography>
         <Typography>Joining Date: {joiningDate}</Typography>
