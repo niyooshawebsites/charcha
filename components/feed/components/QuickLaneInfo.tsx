@@ -11,13 +11,23 @@ import {
   Stack,
 } from "@mui/material";
 import UiPopover from "@/components/ui/UiPopover";
-import type { PopoverType } from "@/components/ui/UiPopover";
+import user from "@/data/user.json";
 
 const QuickLaneInfo = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [popoverType, setPopoverType] = useState<string>("post");
 
   const handlePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(e.currentTarget);
+  };
+
+  const handlePopoverTypeChange = (e: React.MouseEvent<HTMLElement>) => {
+    if (e.currentTarget.id == "laneTitle") {
+      setPopoverType("post");
+    }
+    if (e.currentTarget.id == "postUser") {
+      setPopoverType("user");
+    }
   };
 
   const handlePopoverClose = () => setAnchorEl(null);
@@ -40,7 +50,11 @@ const QuickLaneInfo = () => {
                 <Typography
                   variant="h6"
                   className="text-blue-500 hover:underline cursor-pointer"
-                  onMouseEnter={handlePopoverOpen}
+                  id="laneTitle"
+                  onMouseEnter={() => {
+                    handlePopoverOpen;
+                    handlePopoverTypeChange;
+                  }}
                 >
                   The journey to the end of the Earth
                 </Typography>
@@ -63,6 +77,11 @@ const QuickLaneInfo = () => {
                   component="span"
                   variant="body2"
                   className="font-semibold text-blue-500 hover:underline cursor-pointer"
+                  id="postUser"
+                  onMouseEnter={() => {
+                    handlePopoverOpen;
+                    handlePopoverTypeChange;
+                  }}
                 >
                   Babai Bose
                 </Typography>
@@ -74,14 +93,19 @@ const QuickLaneInfo = () => {
       </List>
 
       <UiPopover
+        username={user.name}
+        activeLanes={user.activeLanes}
+        joiningDate={user.joiningDate}
+        address={user.address}
         title="The journey to the end of the Earth"
         description="The most serene places on the planet"
-        laneImage="https://wallpaperaccess.com/full/625497.jpg"
+        image="https://wallpaperaccess.com/full/625497.jpg"
         followers="200.0K"
         contributors="120"
         anchorEl={anchorEl}
         open={open}
         onClose={handlePopoverClose}
+        type="post"
       />
     </>
   );

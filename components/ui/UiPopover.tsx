@@ -1,13 +1,21 @@
-import { Stack, Box, Typography, Popover } from "@mui/material";
 import LanePopover from "../popover/LanePopover";
 import UserPopover from "../popover/UserPopover";
 
 export type PopoverType = "post" | "user";
 
+interface Address {
+  city: string;
+  country: string;
+}
+
 interface UiPopoverProps {
+  username: string;
+  address: Address;
+  activeLanes: number;
+  joiningDate: string;
   title: string;
   description: string;
-  laneImage: string;
+  image: string;
   followers: string;
   contributors: string;
   anchorEl: HTMLElement | null;
@@ -16,14 +24,28 @@ interface UiPopoverProps {
   type: PopoverType | null;
 }
 
-const renderPopover = (type: PopoverType) => {
+const renderPopover = ({
+  username,
+  address,
+  activeLanes,
+  joiningDate,
+  title,
+  description,
+  image,
+  followers,
+  contributors,
+  anchorEl,
+  open,
+  onClose,
+  type,
+}: UiPopoverProps) => {
   switch (type) {
     case "post":
       return (
         <LanePopover
           title={title}
           description={description}
-          laneImage={laneImage}
+          laneImage={image}
           followers={followers}
           contributors={contributors}
           anchorEl={anchorEl}
@@ -33,7 +55,19 @@ const renderPopover = (type: PopoverType) => {
       );
 
     case "user":
-      return <UserPopover />;
+      return (
+        <UserPopover
+          username={username}
+          address={address}
+          image={image}
+          followers={followers}
+          activeLanes={activeLanes}
+          joiningDate={joiningDate}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={onClose}
+        />
+      );
 
     default:
       return null;
@@ -41,9 +75,13 @@ const renderPopover = (type: PopoverType) => {
 };
 
 const UiPopover = ({
+  username,
+  address,
+  activeLanes,
+  joiningDate,
   title,
   description,
-  laneImage,
+  image,
   followers,
   contributors,
   anchorEl,
@@ -55,9 +93,13 @@ const UiPopover = ({
   return (
     <>
       {renderPopover({
+        username,
+        address,
+        activeLanes,
+        joiningDate,
         title,
         description,
-        laneImage,
+        image,
         followers,
         contributors,
         anchorEl,
