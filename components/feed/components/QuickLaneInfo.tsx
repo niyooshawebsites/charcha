@@ -13,6 +13,7 @@ import {
 import UiPopover from "@/components/ui/UiPopover";
 import user from "@/data/user.json";
 import type { PopoverType } from "@/components/ui/UiPopover";
+import Link from "next/link";
 
 const QuickLaneInfo = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -49,17 +50,20 @@ const QuickLaneInfo = () => {
           <ListItemText
             primary={
               <Stack direction="row" spacing={2} className="flex items-center">
-                <Typography
-                  variant="h6"
-                  className="text-blue-500 hover:underline cursor-pointer"
-                  id="laneTitle"
-                  onMouseEnter={(e) => {
-                    handlePopoverOpen(e);
-                    handlePopoverTypeChange(e);
-                  }}
-                >
-                  The journey to the end of the Earth
-                </Typography>
+                <Link href={"/lane/The journey to the end of the Earth"}>
+                  <Typography
+                    variant="h6"
+                    className="text-blue-500 hover:underline cursor-pointer"
+                    id="laneTitle"
+                    onMouseEnter={(e) => {
+                      handlePopoverOpen(e);
+                      handlePopoverTypeChange(e);
+                    }}
+                  >
+                    The journey to the end of the Earth
+                  </Typography>
+                </Link>
+
                 <Typography
                   component="span"
                   className="text-purple-600 bg-purple-50 px-2 py-0.5 rounded-md text-sm cursor-pointer hover:font-bold hover:underline"
