@@ -5,7 +5,7 @@ const ShareButton = () => {
   return (
     <Tooltip title="Share">
       <IconButton>
-        <ShareIcon />
+        <ShareIcon color="primary" />
       </IconButton>
     </Tooltip>
   );

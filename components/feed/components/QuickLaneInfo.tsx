@@ -64,12 +64,12 @@ const QuickLaneInfo = () => {
                   </Typography>
                 </Link>
 
-                <Typography
+                {/* <Typography
                   component="span"
                   className="text-purple-600 bg-purple-50 px-2 py-0.5 rounded-md text-sm cursor-pointer hover:font-bold hover:underline"
                 >
-                  Follow
-                </Typography>
+                  Follow Lane
+                </Typography> */}
               </Stack>
             }
             secondary={
@@ -78,11 +78,11 @@ const QuickLaneInfo = () => {
                 variant="body2"
                 color="text.secondary"
               >
-                Posted By{" "}
+                Posted on May 30, 2026 By{" "}
                 <Typography
                   component="span"
                   variant="body2"
-                  className="font-semibold text-blue-500 hover:underline cursor-pointer"
+                  className="font-semibold text-blue-500 hover:underline cursor-pointer mr-3"
                   id="postUser"
                   onMouseEnter={(e) => {
                     handlePopoverOpen(e);
@@ -91,7 +91,12 @@ const QuickLaneInfo = () => {
                 >
                   Babai Bose
                 </Typography>
-                . May 30, 2026
+                {/* <Typography
+                  component="span"
+                  className="text-purple-600 bg-purple-50 px-2 py-0.5 rounded-md text-sm cursor-pointer hover:font-bold hover:underline"
+                >
+                  Follow
+                </Typography> */}
               </Typography>
             }
           />
