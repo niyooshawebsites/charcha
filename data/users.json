@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Henry Williams",
+    "username": "EmmaWilson24",
+    "image": "user1.jpg",
+    "address": {
+      "city": "Los Angeles",
+      "country": "USA"
+    },
+    "activeLanes": 5,
+    "joiningDate": "Jan 12, 2026"
+  },
+  {
+    "id": "2",
+    "name": "Liam Carter",
+    "username": "LiamCarter",
+    "image": "user2.jpg",
+    "address": {
+      "city": "London",
+      "country": "UK"
+    },
+    "activeLanes": 12,
+    "joiningDate": "Mar 08, 2026"
+  },
+  {
+    "id": "3",
+    "name": "Sophia Martinez",
+    "username": "SophiaM23",
+    "image": "user3.jpg",
+    "address": {
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    "activeLanes": 3,
+    "joiningDate": "Jun 15, 2026"
+  },
+  {
+    "id": "4",
+    "name": "Noah Anderson",
+    "username": "NoahAnderson",
+    "image": "user4.jpg",
+    "address": {
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "activeLanes": 7,
+    "joiningDate": "Aug 21, 2026"
+  },
+  {
+    "id": "5",
+    "name": "Kevin Nash",
+    "username": "OliviaSharma",
+    "image": "user5.jpg",
+    "address": {
+      "city": "Mumbai",
+      "country": "India"
+    },
+    "activeLanes": 10,
+    "joiningDate": "Oct 05, 2026"
+  }
+]

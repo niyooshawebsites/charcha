@@ -1,7 +1,7 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import ActionBar from "@/components/action/ActionBar";
-import Feed from "@/components/feed/Feed";
 import AdTile from "@/components/ads/AdTile";
+import Feed from "@/components/feed/Feed";
 import CreateLane from "@/components/lanes/CreateLane";
 import MyLanes from "@/components/lanes/MyLanes";
 import pages from "@/data/pages.json";
@@ -12,7 +12,7 @@ const LanePage = () => {
     <Grid
       container
       spacing={3}
-      className="bg-gray-50 max-h-svh p-5 my-3 rounded-2xl border border-gray-100"
+      className="bg-gray-50 max-h-screen p-5 my-3 rounded-2xl border border-gray-100"
     >
       <Grid size={2} className="">
         <Typography variant="h6">Create Lane</Typography>
@@ -25,9 +25,11 @@ const LanePage = () => {
         <QuickLinks pages={pages} />
       </Grid>
 
-      <Grid size={7} className="max-h-svh">
+      <Grid size={7} className="max-h-svh overflow-hidden">
         <ActionBar />
-        <Feed />
+        <Box className="h-10/12 overflow-y-scroll">
+          <Feed />
+        </Box>
       </Grid>
 
       <Grid size={3}>

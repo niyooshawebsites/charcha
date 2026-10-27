@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <Box className=" bg-blue-500 w-full ">
+    <Box className=" bg-blue-500 w-full z-200">
       <Typography className="text-center">Footer</Typography>
     </Box>
   );
