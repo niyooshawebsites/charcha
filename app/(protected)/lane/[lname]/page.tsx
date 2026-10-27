@@ -1,18 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Stack,
-  Grid,
-  Typography,
-  Tab,
-  Box,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Avatar,
-} from "@mui/material";
+import { Stack, Grid, Typography, Tab, Box } from "@mui/material";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import UiButton from "@/components/ui/UiButton";
 import Feed from "@/components/feed/Feed";
@@ -21,13 +10,11 @@ import ReplyIcon from "@mui/icons-material/Reply";
 import type { ActionType } from "@/components/ui/UiModal";
 import UiModal from "@/components/ui/UiModal";
 import Link from "next/link";
-import users from "@/data/users.json";
-import UiPopover from "@/components/ui/UiPopover";
-// import type { PopoverType } from "@/components/ui/UiPopover";
+import contributors from "@/data/contributors.json";
+import ContributorList from "@/components/contributor/ContributorList";
+import Image from "next/image";
 
 const Lane = () => {
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  // const [popoverType, setPopoverType] = useState<PopoverType>("post");
   const [value, setValue] = useState<string>("2");
   const [modalOpen, setModalOpen] = useState(false);
   const [activeAction, setActiveAction] = useState<ActionType | null>(null);
@@ -45,30 +32,37 @@ const Lane = () => {
     setModalOpen(false);
   };
 
-  const handlePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(e.currentTarget);
-  };
-
-  const handlePopoverClose = () => setAnchorEl(null);
-  const open = Boolean(anchorEl);
-
   return (
     <>
       <Grid
         spacing={3}
         className="bg-gray-50 min-h-screen p-5 my-3 rounded-2xl border border-gray-100"
       >
-        <Grid size={12}>
-          <Grid size={12}></Grid>
-          <Grid container size={12} className="bg-purple-100 p-5 rounded-xl">
+        <Grid size={12} className="mb-5">
+          <Grid size={12} className="mb-5">
+            <Image
+              src="/images/jtteote.jpg"
+              width={1920}
+              height={400}
+              alt="jtteote"
+              className="rounded-lg"
+            />
+          </Grid>
+          <Grid
+            container
+            size={12}
+            className="bg-purple-100 p-5 mb-5 rounded-xl"
+          >
             <Grid size={10}>
               <Stack direction={"column"} spacing={2}>
                 <Typography variant="h3">
                   The journey to the end of the Earth
                 </Typography>
-                <Typography>The journey to the end of the Earth</Typography>
-                <Typography variant="h6">
-                  8 Contributors | 5.5K Followers
+                <Typography variant="h6" className="text-gray-600">
+                  The most breathtaking places on the this planet
+                </Typography>
+                <Typography className="text-sm cursor-pointer text-gray-500">
+                  5 Contributors | 5.5K Followers
                 </Typography>
               </Stack>
             </Grid>
@@ -170,50 +164,21 @@ const Lane = () => {
             >
               <Box className="flex justify-between items-center">
                 <Typography variant="h6">
-                  {users.length} Contributors
+                  {contributors.length} Contributors
                 </Typography>
-                <UiButton
+
+                {
+                  contributors.length > 5 ? <UiButton
                   type="button"
                   variant="outlined"
                   color="primary"
                   btnText="View All"
                   fullWidth={false}
-                />
+                  onClick={() => handleOpenModal("contributors")}
+                /> : <></>
+                }
               </Box>
-              <List>
-                {users.map((user) => (
-                  <>
-                    <ListItem
-                      key={user.id}
-                      className="bg-purple-200 my-3 rounded-lg"
-                    >
-                      <ListItemAvatar>
-                        <Avatar src={`/images/${user.image}`} />
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={user.name}
-                        onMouseEnter={handlePopoverOpen}
-                      />
-                    </ListItem>
-
-                    <UiPopover
-                      username={user.name}
-                      activeLanes={user.activeLanes}
-                      joiningDate={user.joiningDate}
-                      address={user.address}
-                      title="The journey to the end of the Earth"
-                      description="The most serene places on the planet"
-                      image="https://wallpaperaccess.com/full/625497.jpg"
-                      followers="200.0K"
-                      contributors="120"
-                      anchorEl={anchorEl}
-                      open={open}
-                      onClose={handlePopoverClose}
-                      type={"user"}
-                    />
-                  </>
-                ))}
-              </List>
+              <ContributorList contributors={contributors} />
             </Stack>
           </Grid>
         </Grid>
@@ -223,6 +188,7 @@ const Lane = () => {
         open={modalOpen}
         onClose={handleCloseModal}
         type={activeAction}
+        data={contributors}
       />
     </>
   );

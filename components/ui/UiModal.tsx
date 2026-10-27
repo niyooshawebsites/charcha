@@ -7,13 +7,22 @@ import PostForm from "../form/PostForm";
 import CommentForm from "../form/CommentForm";
 import CommentList from "../comment/CommentList";
 import CreateLaneForm from "../form/CreateLaneForm";
+import ContributorList from "../contributor/ContributorList";
+import type { ContributorProps } from "../contributor/ContributorList";
 
-export type ActionType = "ask" | "answer" | "post" | "comment" | "createLane";
+export type ActionType =
+  | "ask"
+  | "answer"
+  | "post"
+  | "comment"
+  | "createLane"
+  | "contributors";
 
 interface ModalProps {
   open: boolean;
   onClose: () => void;
   type: ActionType | null;
+  data?: ContributorProps[];
 }
 
 const modalConfig = {
@@ -38,9 +47,13 @@ const modalConfig = {
     description:
       "Share your interests, curate content, host discussions, and more.",
   },
+  contributors: {
+    title: "",
+    description: "",
+  },
 };
 
-const renderForm = (type: ActionType) => {
+const renderElement = (type: ActionType, data: ContributorProps[] = []) => {
   switch (type) {
     case "ask":
       return <AskForm />;
@@ -62,22 +75,27 @@ const renderForm = (type: ActionType) => {
     case "createLane":
       return <CreateLaneForm />;
 
+    case "contributors":
+      return <ContributorList contributors={data} />;
+
     default:
       return null;
   }
 };
 
-const UiModal = ({ open, onClose, type }: ModalProps) => {
+const UiModal = ({ open, onClose, type, data }: ModalProps) => {
   if (!type) return null;
 
   const config = modalConfig[type];
 
   return (
     <Modal open={open} onClose={onClose}>
-      <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800] bg-blue-100 border-2 border-blue-600 p-4 shadow rounded-lg">
+      <Box className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[600] max-w-[800] max-h-8/12 max-h- bg-blue-100 border-2 border-blue-600 p-3 shadow rounded-xl">
         <Box className="flex justify-between mb-2">
           <Typography variant="h6" className="mb-1">
-            {config.title}
+            {type == "contributors"
+              ? `${data!.length} Contributors`
+              : config.title}
           </Typography>
           <IconButton className="absolute top-2 right-2" onClick={onClose}>
             <CloseIcon />
@@ -85,10 +103,14 @@ const UiModal = ({ open, onClose, type }: ModalProps) => {
         </Box>
 
         <UiCard>
-          <Typography className="text-gray-700 mb-5">
-            {config.description}
-          </Typography>
-          {renderForm(type)}
+          {config.description ? (
+            <Typography className="text-gray-700 mb-5">
+              {config.description}
+            </Typography>
+          ) : (
+            <></>
+          )}
+          {renderElement(type, data)}
         </UiCard>
       </Box>
     </Modal>
