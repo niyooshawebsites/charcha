@@ -3,6 +3,7 @@
     "name": "Travelling",
     "spaces": [
       {
+        "id": "1",
         "name": "Travel Lovers",
         "description": "A community for travel enthusiasts to share experiences, discover destinations, exchange tips, and inspire each other to explore the world.",
         "logo": "https://api.iconify.design/lucide:plane.svg",

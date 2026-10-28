@@ -1,7 +1,7 @@
 import LanePopover from "../popover/LanePopover";
 import UserPopover from "../popover/UserPopover";
 
-export type PopoverType = "post" | "user";
+export type PopoverType = "lane" | "user" | "contributor";
 
 interface Address {
   city: string;
@@ -10,9 +10,10 @@ interface Address {
 
 interface UiPopoverProps {
   username: string;
-  address: Address;
-  activeLanes: number;
-  joiningDate: string;
+  address?: Address;
+  activeLanes?: number;
+  joiningDate?: string;
+  createdAt?: string;
   title: string;
   description: string;
   image: string;
@@ -29,6 +30,7 @@ const renderPopover = ({
   address,
   activeLanes,
   joiningDate,
+  createdAt,
   title,
   description,
   image,
@@ -40,7 +42,7 @@ const renderPopover = ({
   type,
 }: UiPopoverProps) => {
   switch (type) {
-    case "post":
+    case "lane":
       return (
         <LanePopover
           title={title}
@@ -48,6 +50,7 @@ const renderPopover = ({
           laneImage={image}
           followers={followers}
           contributors={contributors}
+          createdAt={createdAt!}
           anchorEl={anchorEl}
           open={open}
           onClose={onClose}
@@ -58,11 +61,26 @@ const renderPopover = ({
       return (
         <UserPopover
           username={username}
-          address={address}
+          address={address!}
           image={image}
           followers={followers}
-          activeLanes={activeLanes}
-          joiningDate={joiningDate}
+          activeLanes={activeLanes!}
+          joiningDate={joiningDate!}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={onClose}
+        />
+      );
+
+    case "contributor":
+      return (
+        <UserPopover
+          username={username}
+          address={address!}
+          image={image}
+          followers={followers}
+          activeLanes={activeLanes!}
+          joiningDate={joiningDate!}
           anchorEl={anchorEl}
           open={open}
           onClose={onClose}
@@ -79,6 +97,7 @@ const UiPopover = ({
   address,
   activeLanes,
   joiningDate,
+  createdAt,
   title,
   description,
   image,
@@ -97,6 +116,7 @@ const UiPopover = ({
         address,
         activeLanes,
         joiningDate,
+        createdAt,
         title,
         description,
         image,

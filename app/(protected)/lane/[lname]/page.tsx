@@ -18,6 +18,7 @@ const Lane = () => {
   const [value, setValue] = useState<string>("2");
   const [modalOpen, setModalOpen] = useState(false);
   const [activeAction, setActiveAction] = useState<ActionType | null>(null);
+  const sampleContributors = contributors.slice(0, 5);
 
   const handleChange = (e: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -167,18 +168,20 @@ const Lane = () => {
                   {contributors.length} Contributors
                 </Typography>
 
-                {
-                  contributors.length > 5 ? <UiButton
-                  type="button"
-                  variant="outlined"
-                  color="primary"
-                  btnText="View All"
-                  fullWidth={false}
-                  onClick={() => handleOpenModal("contributors")}
-                /> : <></>
-                }
+                {contributors.length > 5 ? (
+                  <UiButton
+                    type="button"
+                    variant="outlined"
+                    color="primary"
+                    btnText="View All"
+                    fullWidth={false}
+                    onClick={() => handleOpenModal("contributors")}
+                  />
+                ) : (
+                  <></>
+                )}
               </Box>
-              <ContributorList contributors={contributors} />
+              <ContributorList data={sampleContributors} />
             </Stack>
           </Grid>
         </Grid>

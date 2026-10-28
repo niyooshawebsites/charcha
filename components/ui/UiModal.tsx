@@ -76,7 +76,7 @@ const renderElement = (type: ActionType, data: ContributorProps[] = []) => {
       return <CreateLaneForm />;
 
     case "contributors":
-      return <ContributorList contributors={data} />;
+      return <ContributorList data={data} />;
 
     default:
       return null;

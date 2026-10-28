@@ -11,6 +11,7 @@ interface LanePopoverProps {
   anchorEl: HTMLElement | null;
   open: boolean;
   onClose: () => void;
+  createdAt: string;
 }
 
 const LanePopover = ({
@@ -22,6 +23,7 @@ const LanePopover = ({
   anchorEl,
   open,
   onClose,
+  createdAt,
 }: LanePopoverProps) => (
   <Popover anchorEl={anchorEl} open={open} onClose={onClose} className=" mt-10">
     <Stack
@@ -50,6 +52,7 @@ const LanePopover = ({
       <Box className="flex justify-between">
         <Typography>Contributors: {contributors}</Typography>
         <Typography>Followers: {followers}</Typography>
+        <Typography>Formed on: {createdAt}</Typography>
       </Box>
 
       <UiButton
