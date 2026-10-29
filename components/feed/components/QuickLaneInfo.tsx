@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import {
   List,
@@ -14,10 +12,12 @@ import UiPopover from "@/components/ui/UiPopover";
 import user from "@/data/user.json";
 import type { PopoverType } from "@/components/ui/UiPopover";
 import Link from "next/link";
+import lanelist from "@/data/lanes.json";
+import LanePopover from "@/components/popover/LanePopover";
 
 const QuickLaneInfo = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [popoverType, setPopoverType] = useState<PopoverType>("post");
+  const [popoverType, setPopoverType] = useState<PopoverType>("lane");
 
   const handlePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(e.currentTarget);
@@ -25,7 +25,7 @@ const QuickLaneInfo = () => {
 
   const handlePopoverTypeChange = (e: React.MouseEvent<HTMLElement>) => {
     if (e.currentTarget.id == "laneTitle") {
-      setPopoverType("post");
+      setPopoverType("lane");
     }
 
     if (e.currentTarget.id == "postUser") {
@@ -63,13 +63,6 @@ const QuickLaneInfo = () => {
                     The journey to the end of the Earth
                   </Typography>
                 </Link>
-
-                {/* <Typography
-                  component="span"
-                  className="text-purple-600 bg-purple-50 px-2 py-0.5 rounded-md text-sm cursor-pointer hover:font-bold hover:underline"
-                >
-                  Follow Lane
-                </Typography> */}
               </Stack>
             }
             secondary={
@@ -91,19 +84,13 @@ const QuickLaneInfo = () => {
                 >
                   Babai Bose
                 </Typography>
-                {/* <Typography
-                  component="span"
-                  className="text-purple-600 bg-purple-50 px-2 py-0.5 rounded-md text-sm cursor-pointer hover:font-bold hover:underline"
-                >
-                  Follow
-                </Typography> */}
               </Typography>
             }
           />
         </ListItem>
       </List>
 
-      <UiPopover
+      {/* <UiPopover
         username={user.name}
         activeLanes={user.activeLanes}
         joiningDate={user.joiningDate}
@@ -117,6 +104,14 @@ const QuickLaneInfo = () => {
         open={open}
         onClose={handlePopoverClose}
         type={popoverType}
+      /> */}
+
+      <LanePopover
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handlePopoverClose}
+        type="lane"
+        data={lanelist[0].spaces[0]}
       />
     </>
   );

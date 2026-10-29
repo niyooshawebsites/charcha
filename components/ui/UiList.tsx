@@ -13,12 +13,12 @@ import UiPopover from "./UiPopover";
 
 export type ListType = "contributor" | "user" | "lane";
 
-interface Address {
+type Address = {
   city: string;
   country: string;
-}
+};
 
-interface ContributorOrUserProps {
+type ContributorOrUserProps = {
   id: string;
   name: string;
   username: string;
@@ -27,9 +27,9 @@ interface ContributorOrUserProps {
   activeLanes: number;
   joiningDate: string;
   address: Address;
-}
+};
 
-interface LaneProps {
+export type LaneProps = {
   id: string;
   title: string;
   image: string;
@@ -38,32 +38,17 @@ interface LaneProps {
   shortDesc: string;
   longDesc: string;
   formationDate: string;
-}
+};
 
-// interface DataItem {
-//   id: string;
-//   title: string;
-//   name: string;
-//   username: string;
-//   image: string;
-//   followers: string;
-//   shortDesc?: string;
-//   longDesc?: string;
-//   activeLanes?: number;
-//   joiningDate?: string;
-//   address?: Address;
-//   formationDate?: string;
-// }
-
-// interface DataProps {
-//   data: DataItem[];
-//   type: ListType | null;
-// }
-
-interface DataProps {
-  data: ContributorOrUserProps[] | LaneProps[];
-  type: ListType | null;
-}
+type DataProps =
+  | {
+      type: "contributor" | "user";
+      data: ContributorOrUserProps[];
+    }
+  | {
+      type: "lane";
+      data: LaneProps[];
+    };
 
 const UiList = ({ type, data }: DataProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -111,7 +96,7 @@ const UiList = ({ type, data }: DataProps) => {
             />
 
             <UiPopover
-              username={d.name}
+              username={d.username}
               activeLanes={d.activeLanes}
               joiningDate={d.joiningDate}
               address={d.address}
@@ -123,7 +108,7 @@ const UiList = ({ type, data }: DataProps) => {
               anchorEl={anchorEl}
               open={hoveredDataId === d.id}
               onClose={handlePopoverClose}
-              type={"user"}
+              type="user"
             />
           </ListItem>
         ))}
@@ -159,7 +144,7 @@ const UiList = ({ type, data }: DataProps) => {
               }
             />
 
-            <UiPopover
+            {/* <UiPopover
               title={d.title}
               shortDesc={d.shortDesc}
               image={`/images/${d.image}`}
@@ -168,76 +153,22 @@ const UiList = ({ type, data }: DataProps) => {
               anchorEl={anchorEl}
               open={hoveredDataId === d.id}
               onClose={handlePopoverClose}
-              type={"user"}
+              type="lane"
+            /> */}
+
+            <UiPopover
+              anchorEl={anchorEl}
+              open={open}
+              onClose={onClose}
+              type="lane"
+              type="lane"
+              data={data}
             />
           </ListItem>
         ))}
       </List>
     );
   }
-
-  return (
-    <List className="h-104 overflow-y-auto">
-      {data.map((d) => (
-        <ListItem
-          key={d.id}
-          className="bg-purple-200 mb-3 rounded-lg hover:border hover:border-purple-500"
-        >
-          <ListItemAvatar>
-            <Avatar src={`/images/${d.image}`} />
-          </ListItemAvatar>
-
-          <ListItemText
-            primary={
-              <Typography
-                onMouseEnter={(e) => handlePopoverOpen(e, d.id)}
-                className="inline pointer hover:underline"
-              >
-                {d.name}
-              </Typography>
-            }
-            secondary={
-              <Typography className="text-xs text-gray-700">
-                Active in {d.activeLanes} Lanes
-              </Typography>
-            }
-          />
-
-          {type == "user" || type == "contributor" ? (
-            <UiPopover
-              username={d.name}
-              activeLanes={d.activeLanes}
-              joiningDate={d.joiningDate}
-              address={d.address}
-              title="The journey to the end of the Earth"
-              description="The most serene places on the planet"
-              image={`/images/${d.image}`}
-              followers={d.followers}
-              contributors="120"
-              anchorEl={anchorEl}
-              open={hoveredDataId === d.id}
-              onClose={handlePopoverClose}
-              type={"user"}
-            />
-          ) : (
-            <UiPopover
-              username={d.name}
-              title={d.title}
-              shortDesc={d.shortDesc}
-              longDesc={d.longDesc}
-              image={`/images/${d.image}`}
-              followers={d.followers}
-              contributors="120"
-              anchorEl={anchorEl}
-              open={hoveredDataId === d.id}
-              onClose={handlePopoverClose}
-              type={"lane"}
-            />
-          )}
-        </ListItem>
-      ))}
-    </List>
-  );
 };
 
 export default UiList;
