@@ -1,4 +1,3 @@
-import React from "react";
 import FeedItem from "./FeedItem";
 import { Box } from "@mui/material";
 

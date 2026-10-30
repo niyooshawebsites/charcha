@@ -1,137 +1,22 @@
 "use client";
 
-// import LanePopover from "../popover/LanePopover";
-// import UserPopover from "../popover/UserPopover";
-
 import { Popover, Stack, Box, Typography } from "@mui/material";
 import Image from "next/image";
 import UiButton from "./UiButton";
+import type { PopoverDataType } from "@/types/popover";
 
-export type PopoverType = "lane" | "user" | "contributor";
+const UiPopover = (props: PopoverDataType) => {
+  const { type, open, anchorEl, onClose } = props;
 
-type Address = {
-  city: string;
-  country: string;
-};
+  if (type === "user" || type === "contributor") {
+    const { data } = props;
 
-type ContributorOrUserProps = {
-  name: string;
-  username: string;
-  image: string;
-  address: Address;
-  activeLanes: number;
-  followers: number;
-  joiningDate: string;
-  anchorEl: HTMLElement | null;
-  open: boolean;
-  onClose: () => void;
-};
-
-type LaneProps = {
-  title: string;
-  image: string;
-  shortDesc: string;
-  followers: number;
-  contributors: number;
-  createdAt: string;
-  anchorEl: HTMLElement | null;
-  open: boolean;
-  onClose: () => void;
-};
-
-type DataProps =
-  | {
-      type: "contributor" | "user";
-      data: ContributorOrUserProps[];
-      anchorEl: HTMLElement | null;
-      open: boolean;
-      onClose: () => void;
-    }
-  | {
-      type: "lane";
-      data: LaneProps[];
-      anchorEl: HTMLElement | null;
-      open: boolean;
-      onClose: () => void;
-    };
-
-// const renderPopover = ({
-//   username,
-//   address,
-//   activeLanes,
-//   joiningDate,
-//   createdAt,
-//   title,
-//   description,
-//   image,
-//   followers,
-//   contributors,
-//   anchorEl,
-//   open,
-//   onClose,
-//   type,
-// }: UiPopoverProps) => {
-//   switch (type) {
-//     case "lane":
-//       return (
-//         <LanePopover
-//           title={title}
-//           shortDesc={shortDesc}
-//           image={image}
-//           followers={followers}
-//           contributors={contributors}
-//           createdAt={createdAt!}
-//           anchorEl={anchorEl}
-//           open={open}
-//           onClose={onClose}
-//         />
-//       );
-
-//     case "user":
-//       return (
-//         <UserPopover
-//           name={name}
-//           username={username}
-//           address={address!}
-//           image={image}
-//           followers={followers}
-//           activeLanes={activeLanes!}
-//           joiningDate={joiningDate!}
-//           anchorEl={anchorEl}
-//           open={open}
-//           onClose={onClose}
-//         />
-//       );
-
-//     case "contributor":
-//       return (
-//         <UserPopover
-//           name={name}
-//           username={username}
-//           address={address!}
-//           image={image}
-//           followers={followers}
-//           activeLanes={activeLanes!}
-//           joiningDate={joiningDate!}
-//           anchorEl={anchorEl}
-//           open={open}
-//           onClose={onClose}
-//         />
-//       );
-
-//     default:
-//       return null;
-//   }
-// };
-
-const UiPopover = ({ type, data, open, anchorEl, onClose }: DataProps) => {
-  if (type == "contributor" || type == "user") {
     return (
       <Popover
         anchorEl={anchorEl}
         open={open}
         onClose={onClose}
-        className=" mt-5"
+        className="mt-5"
       >
         <Stack
           direction="column"
@@ -139,17 +24,17 @@ const UiPopover = ({ type, data, open, anchorEl, onClose }: DataProps) => {
           className="p-5 bg-gray-900 text-gray-100 rounded-lg"
         >
           <Box className="flex justify-start items-center gap-2">
-            <Box>
-              <Image
-                src={data.image}
-                alt={data.username}
-                width={100}
-                height={100}
-                className="border rounded-lg"
-              />
-            </Box>
+            <Image
+              src={data.image}
+              alt={data.username}
+              width={100}
+              height={100}
+              className="border rounded-lg"
+            />
+
             <Box>
               <Typography variant="h6">{data.username}</Typography>
+
               <Typography className="text-sm text-gray-500">
                 {data.address.city}, {data.address.country}
               </Typography>
@@ -174,13 +59,15 @@ const UiPopover = ({ type, data, open, anchorEl, onClose }: DataProps) => {
     );
   }
 
-  if (type == "lane") {
+  if (type === "lane") {
+    const { data } = props;
+
     return (
       <Popover
         anchorEl={anchorEl}
         open={open}
         onClose={onClose}
-        className=" mt-10"
+        className="mt-10"
       >
         <Stack
           direction="column"
@@ -188,27 +75,27 @@ const UiPopover = ({ type, data, open, anchorEl, onClose }: DataProps) => {
           className="p-5 bg-gray-900 text-gray-100 rounded-lg"
         >
           <Box className="flex justify-start items-center gap-2">
+            <Image
+              src={data.image}
+              alt={data.title}
+              width={100}
+              height={100}
+              className="border rounded-lg"
+            />
+
             <Box>
-              <Image
-                src={laneImage}
-                alt={title}
-                width={100}
-                height={100}
-                className="border rounded-lg"
-              />
-            </Box>
-            <Box>
-              <Typography variant="h6">{title}</Typography>
+              <Typography variant="h6">{data.title}</Typography>
+
               <Typography className="text-sm text-gray-500">
-                {description}
+                {data.shortDesc}
               </Typography>
             </Box>
           </Box>
 
           <Box className="flex justify-between">
-            <Typography>Contributors: {contributors}</Typography>
-            <Typography>Followers: {followers}</Typography>
-            <Typography>Formed on: {createdAt}</Typography>
+            <Typography>Contributors: {data.contributors}</Typography>
+            <Typography>Followers: {data.followers}</Typography>
+            <Typography>Formed on: {data.createdAt}</Typography>
           </Box>
 
           <UiButton
@@ -222,45 +109,8 @@ const UiPopover = ({ type, data, open, anchorEl, onClose }: DataProps) => {
       </Popover>
     );
   }
-};
 
-// const UiPopover = ({
-//   username,
-//   address,
-//   activeLanes,
-//   joiningDate,
-//   createdAt,
-//   title,
-//   description,
-//   image,
-//   followers,
-//   contributors,
-//   anchorEl,
-//   open,
-//   onClose,
-//   type,
-// }: DataProps) => {
-//   if (!type) return null;
-//   return (
-//     <>
-//       {renderPopover({
-//         username,
-//         address,
-//         activeLanes,
-//         joiningDate,
-//         createdAt,
-//         title,
-//         description,
-//         image,
-//         followers,
-//         contributors,
-//         anchorEl,
-//         open,
-//         onClose,
-//         type,
-//       })}
-//     </>
-//   );
-// };
+  return null;
+};
 
 export default UiPopover;

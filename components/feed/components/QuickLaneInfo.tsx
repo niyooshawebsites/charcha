@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import {
   List,
@@ -8,34 +10,45 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import UiPopover from "@/components/ui/UiPopover";
-import user from "@/data/user.json";
-import type { PopoverType } from "@/components/ui/UiPopover";
+import type { PopoverDataType } from "@/types/popover";
 import Link from "next/link";
 import lanelist from "@/data/lanes.json";
 import LanePopover from "@/components/popover/LanePopover";
 
 const QuickLaneInfo = () => {
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [popoverType, setPopoverType] = useState<PopoverType>("lane");
+  const [popoverType, setPopoverType] = useState<PopoverDataType | null>(null);
 
-  const handlePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(e.currentTarget);
+  const handleLanePopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
+    setPopoverType({
+      anchorEl: e.currentTarget,
+      open: true,
+      onClose: () => setPopoverType(null),
+      type: "lane",
+      data: lanelist[0].subLanes[0],
+    });
   };
 
-  const handlePopoverTypeChange = (e: React.MouseEvent<HTMLElement>) => {
-    if (e.currentTarget.id == "laneTitle") {
-      setPopoverType("lane");
-    }
-
-    if (e.currentTarget.id == "postUser") {
-      setPopoverType("user");
-    }
+  const handleUserPopoverOpen = (e: React.MouseEvent<HTMLElement>) => {
+    setPopoverType({
+      anchorEl: e.currentTarget,
+      open: true,
+      onClose: () => setPopoverType(null),
+      type: "user",
+      data: {
+        // Pass your actual user data here
+        id: "1",
+        username: "Babai Bose",
+        image: "/static/images/avatar/1.jpg",
+        address: {
+          city: "Delhi",
+          country: "India",
+        },
+        activeLanes: 5,
+        followers: 100,
+        joiningDate: "May 30, 2026",
+      },
+    });
   };
-
-  const handlePopoverClose = () => setAnchorEl(null);
-
-  const open = Boolean(anchorEl);
 
   return (
     <>
@@ -55,10 +68,7 @@ const QuickLaneInfo = () => {
                     variant="h6"
                     className="text-blue-500 hover:underline cursor-pointer"
                     id="laneTitle"
-                    onMouseEnter={(e) => {
-                      handlePopoverOpen(e);
-                      handlePopoverTypeChange(e);
-                    }}
+                    onMouseEnter={handleLanePopoverOpen}
                   >
                     The journey to the end of the Earth
                   </Typography>
@@ -77,10 +87,7 @@ const QuickLaneInfo = () => {
                   variant="body2"
                   className="font-semibold text-blue-500 hover:underline cursor-pointer mr-3"
                   id="postUser"
-                  onMouseEnter={(e) => {
-                    handlePopoverOpen(e);
-                    handlePopoverTypeChange(e);
-                  }}
+                  onMouseEnter={handleUserPopoverOpen}
                 >
                   Babai Bose
                 </Typography>
@@ -90,29 +97,7 @@ const QuickLaneInfo = () => {
         </ListItem>
       </List>
 
-      {/* <UiPopover
-        username={user.name}
-        activeLanes={user.activeLanes}
-        joiningDate={user.joiningDate}
-        address={user.address}
-        title="The journey to the end of the Earth"
-        description="The most serene places on the planet"
-        image="https://wallpaperaccess.com/full/625497.jpg"
-        followers="200.0K"
-        contributors="120"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handlePopoverClose}
-        type={popoverType}
-      /> */}
-
-      <LanePopover
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handlePopoverClose}
-        type="lane"
-        data={lanelist[0].spaces[0]}
-      />
+      {popoverType && <LanePopover {...popoverType} />}
     </>
   );
 };

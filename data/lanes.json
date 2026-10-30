@@ -1,7 +1,7 @@
 [
   {
-    "name": "Travelling",
-    "spaces": [
+    "title": "Travelling",
+    "subLanes": [
       {
         "id": "1",
         "title": "Travel Lovers",
@@ -66,6 +66,78 @@
         "banner": "https://images.unsplash.com/photo-1551632811-561732d1e306",
         "followers": 19000,
         "contributors": 74,
+        "createdAt": "October 29, 2026"
+      }
+    ]
+  },
+
+  {
+    "title": "Technology",
+    "subLanes": [
+      {
+        "id": "1",
+        "title": "Tech Enthusiasts",
+        "shortDesc": "Explore the latest technology trends, innovations, gadgets, and ideas shaping the digital world.",
+        "longDesc": "Tech Enthusiasts is a welcoming community for people who are passionate about technology and digital innovation. Whether you enjoy exploring emerging technologies, discussing the latest gadgets, following industry developments, or discovering new digital tools, this space brings curious minds together. Share technology news, personal experiences, product recommendations, and interesting discoveries from the ever-evolving tech landscape. Discuss innovations in computing, software, hardware, consumer electronics, and digital services. Exchange opinions, ask questions, and learn from people with different levels of technical knowledge. Discover useful applications, exciting inventions, and technologies that are changing how people live and work. Whether you are a casual technology enthusiast, a student, or an experienced professional, everyone is encouraged to participate. Tech Enthusiasts celebrates curiosity, innovation, knowledge sharing, and the exciting possibilities of technology.",
+        "image": "https://api.iconify.design/lucide:cpu.svg",
+        "banner": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+        "followers": 32000,
+        "contributors": 45,
+        "createdAt": "October 29, 2026"
+      },
+      {
+        "id": "2",
+        "title": "Artificial Intelligence & Machine Learning",
+        "shortDesc": "Discover AI innovations, machine learning applications, automation, and intelligent technologies.",
+        "longDesc": "Artificial Intelligence & Machine Learning is a community for people interested in understanding and exploring intelligent technologies. From generative AI and conversational assistants to predictive analytics, neural networks, and computer vision, this space covers the technologies transforming industries and everyday life. Share interesting AI tools, research developments, tutorials, practical applications, and personal experiments. Discuss machine learning models, deep learning, natural language processing, robotics, and AI-powered automation. Exchange ideas about responsible AI development, data privacy, ethical considerations, and the future impact of intelligent systems. Beginners can ask questions and explore learning resources, while experienced developers and researchers can share technical insights and project experiences. Discover how AI is being applied in healthcare, education, business, creativity, science, and other fields. Artificial Intelligence & Machine Learning encourages curiosity, responsible innovation, collaboration, and continuous learning in one of the fastest-growing areas of technology.",
+        "image": "https://api.iconify.design/lucide:brain-circuit.svg",
+        "banner": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+        "followers": 48000,
+        "contributors": 68,
+        "createdAt": "October 29, 2026"
+      },
+      {
+        "id": "3",
+        "title": "Programming & Software Development",
+        "shortDesc": "Share coding knowledge, development projects, programming languages, and software engineering tips.",
+        "longDesc": "Programming & Software Development is a community for developers, programmers, students, and anyone interested in building software. Whether you are learning your first programming language or developing complex applications, this space provides opportunities to exchange knowledge and improve your skills. Discuss programming languages such as Python, JavaScript, Java, C++, and other popular technologies. Share coding tutorials, development resources, useful libraries, debugging techniques, and real-world projects. Explore web development, mobile applications, backend systems, APIs, databases, software architecture, and development frameworks. Ask technical questions, help others solve coding challenges, and share lessons learned from your development journey. Members can showcase their projects, exchange code improvement suggestions, and discuss industry best practices. From beginners exploring their first lines of code to experienced software engineers building scalable applications, everyone is welcome. Programming & Software Development celebrates problem-solving, creativity, collaboration, and the continuous pursuit of technical excellence.",
+        "image": "https://api.iconify.design/lucide:code-2.svg",
+        "banner": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "followers": 56000,
+        "contributors": 92,
+        "createdAt": "October 29, 2026"
+      },
+      {
+        "id": "4",
+        "title": "Gadgets & Consumer Electronics",
+        "shortDesc": "Explore smartphones, laptops, smart devices, accessories, reviews, and the latest electronics.",
+        "longDesc": "Gadgets & Consumer Electronics is a community for technology lovers who enjoy discovering and discussing modern electronic devices. From smartphones and laptops to tablets, smartwatches, headphones, cameras, gaming accessories, and smart home equipment, this space brings gadget enthusiasts together. Share product reviews, comparisons, buying recommendations, unboxing experiences, and practical usage tips. Discuss device specifications, performance, battery life, design, durability, and value for money. Discover upcoming product launches, new features, accessories, and useful technologies that improve everyday life. Members can ask for purchasing advice, share troubleshooting solutions, and recommend products based on real-world experiences. Compare different brands and models while learning about the latest developments in consumer electronics. Whether you enjoy upgrading your personal devices, building a smart home, or simply staying informed about new gadgets, this community provides a place to exchange useful information. Gadgets & Consumer Electronics celebrates innovation, informed purchasing decisions, and the technology people use every day.",
+        "image": "https://api.iconify.design/lucide:smartphone.svg",
+        "banner": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece",
+        "followers": 39000,
+        "contributors": 37,
+        "createdAt": "October 29, 2026"
+      },
+      {
+        "id": "5",
+        "title": "Cybersecurity & Digital Privacy",
+        "shortDesc": "Learn about online security, data protection, ethical hacking, and digital privacy practices.",
+        "longDesc": "Cybersecurity & Digital Privacy is a community for people interested in protecting digital information, securing devices, and understanding online threats. As technology becomes increasingly connected, learning how to stay safe online is more important than ever. Share cybersecurity news, educational resources, security tools, and practical recommendations for protecting personal and professional information. Discuss password management, encryption, secure networks, phishing prevention, malware awareness, identity protection, and privacy-focused technologies. Explore ethical hacking, penetration testing, vulnerability research, network security, and responsible security practices. Beginners can learn essential digital safety habits, while experienced professionals can exchange technical knowledge and discuss emerging security challenges. Members are encouraged to share responsible security research, awareness initiatives, and lessons from real-world incidents without exposing private information or enabling harmful activities. Discover ways to strengthen digital security and make informed decisions about online privacy. Cybersecurity & Digital Privacy promotes awareness, responsible technology use, and a safer digital environment for everyone.",
+        "image": "https://api.iconify.design/lucide:shield-check.svg",
+        "banner": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+        "followers": 27500,
+        "contributors": 51,
+        "createdAt": "October 29, 2026"
+      },
+      {
+        "id": "6",
+        "title": "Future Tech & Innovation",
+        "shortDesc": "Explore emerging technologies, robotics, space exploration, virtual reality, and future innovations.",
+        "longDesc": "Future Tech & Innovation is a community for forward-thinking people who are fascinated by emerging technologies and the possibilities of tomorrow. Explore groundbreaking developments in robotics, augmented reality, virtual reality, quantum computing, biotechnology, space technology, autonomous systems, and next-generation computing. Share research discoveries, innovation stories, technology predictions, and exciting projects that could shape the future. Discuss how emerging technologies may transform industries, education, healthcare, transportation, communication, and everyday life. Discover futuristic inventions, experimental products, scientific breakthroughs, and creative applications of advanced technology. Members can exchange ideas, discuss opportunities and challenges, and explore the social and ethical implications of technological progress. Whether you are a technology enthusiast, researcher, entrepreneur, student, or simply curious about what comes next, this community encourages open discussions and imaginative thinking. Future Tech & Innovation celebrates discovery, creativity, scientific progress, and the technologies that may define the next generation.",
+        "image": "https://api.iconify.design/lucide:rocket.svg",
+        "banner": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+        "followers": 18500,
+        "contributors": 29,
         "createdAt": "October 29, 2026"
       }
     ]
