@@ -70,7 +70,7 @@ const QuickLaneInfo = () => {
                     id="laneTitle"
                     onMouseEnter={handleLanePopoverOpen}
                   >
-                    The journey to the end of the Earth
+                    Travel Lovers
                   </Typography>
                 </Link>
               </Stack>
