@@ -12,7 +12,10 @@
         "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
         "followers": 21500,
         "contributors": 25,
-        "createdAt": "May 30, 2023"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "May 30, 2023",
+        "updatedAt": "May 30, 2023"
       },
       {
         "id": "2",
@@ -23,7 +26,10 @@
         "banner": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
         "followers": 13000,
         "contributors": 44,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "3",
@@ -34,7 +40,10 @@
         "banner": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
         "followers": 44000,
         "contributors": 10,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "4",
@@ -45,7 +54,10 @@
         "banner": "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
         "followers": 12000,
         "contributors": 17,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "5",
@@ -56,7 +68,10 @@
         "banner": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
         "followers": 23500,
         "contributors": 53,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "6",
@@ -67,7 +82,10 @@
         "banner": "https://images.unsplash.com/photo-1551632811-561732d1e306",
         "followers": 19000,
         "contributors": 74,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       }
     ]
   },
@@ -85,7 +103,10 @@
         "banner": "https://images.unsplash.com/photo-1518770660439-4636190af475",
         "followers": 32000,
         "contributors": 45,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "8",
@@ -96,7 +117,10 @@
         "banner": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
         "followers": 48000,
         "contributors": 68,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "9",
@@ -107,7 +131,10 @@
         "banner": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
         "followers": 56000,
         "contributors": 92,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "10",
@@ -118,7 +145,10 @@
         "banner": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece",
         "followers": 39000,
         "contributors": 37,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "11",
@@ -129,7 +159,10 @@
         "banner": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
         "followers": 27500,
         "contributors": 51,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       },
       {
         "id": "12",
@@ -140,7 +173,10 @@
         "banner": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
         "followers": 18500,
         "contributors": 29,
-        "createdAt": "October 29, 2026"
+        "ownerId": null,
+        "isCustom": false,
+        "createdAt": "October 29, 2026",
+        "updatedAt": "October 29, 2026"
       }
     ]
   }
